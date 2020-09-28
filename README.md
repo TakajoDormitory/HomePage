@@ -23,7 +23,7 @@
 * devブランチからmasterブランチへのマージは、[最終責任者](https://github.com/TakajoDormitory/HomePage/wiki#%E6%9C%80%E7%B5%82%E8%B2%AC%E4%BB%BB%E8%80%85)が行う
 
 徳山工業高等専門学校に帰属する高城寮の著作物です。  
-ソースコードの私的使用、外部使用はもちろん禁止です。
+ソースコードの私的使用、外部使用は禁止です。
 
 ## 著作権
 Copyright © 2020 TakajoDormitory All Rights Reserved.
