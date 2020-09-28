@@ -1,0 +1,104 @@
+body{
+    font-style:normal;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* 以下スライダー用 */
+.slider {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin-top:20px;
+}
+
+.slider .slider-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-left:0;
+}
+
+.slider .slider-inner li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+    pointer-events: none
+}
+.slider .slider-inner img{
+    border-radius: 4px;
+}
+.slider .slider-inner li.show {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    z-index: 1;
+    pointer-events: auto;
+    width:auto;
+}
+
+.slider .nav {
+    padding-left:0;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 0
+}
+
+.slider .nav li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 15px;
+    background: #ddd;
+    cursor: pointer;
+    -webkit-transition: background 400ms;
+    transition: background 400ms
+}
+
+.slider .nav li:hover {
+    background: maroon
+}
+
+.slider .nav li.current {
+    background: maroon
+}
+
+
+.slider .arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 60px;
+    background: #000;
+    color: #fff;
+    line-height: 60px;
+    padding: 5px;
+    -webkit-transition: opacity 400ms;
+    transition: opacity 400ms
+}
+
+.slider .arrow:hover {
+    opacity: .7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"
+}
+
+.slider .arrow#arrow-prev {
+    left: 0;
+    -webkit-transform: translate(-100%,-50%);
+    transform: translate(-100%,-50%)
+}
+
+.slider .arrow#arrow-next {
+    right: 0;
+    -webkit-transform: translate(100%,-50%);
+    transform: translate(100%,-50%)
+}
