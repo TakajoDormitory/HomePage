@@ -1,8 +1,3 @@
-body{
-    font-style:normal;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-
 /* 以下スライダー用 */
 .slider {
     position: relative;
@@ -63,42 +58,18 @@ body{
 }
 
 .slider .nav li:hover {
-    background: maroon
+    background: #A7212F
 }
 
 .slider .nav li.current {
-    background: maroon
+    background: #A7212F
 }
 
 
 .slider .arrow {
-    position: absolute;
-    top: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    width: 20px;
-    height: 60px;
-    background: #000;
-    color: #fff;
-    line-height: 60px;
-    padding: 5px;
-    -webkit-transition: opacity 400ms;
-    transition: opacity 400ms
+    display: none;
 }
 
-.slider .arrow:hover {
-    opacity: .7;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"
-}
-
-.slider .arrow#arrow-prev {
-    left: 0;
-    -webkit-transform: translate(-100%,-50%);
-    transform: translate(-100%,-50%)
-}
-
-.slider .arrow#arrow-next {
-    right: 0;
-    -webkit-transform: translate(100%,-50%);
-    transform: translate(100%,-50%)
+.movie video{
+    width: 50vw;
 }
