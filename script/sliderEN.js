@@ -1,6 +1,6 @@
 // 表示する画像の配列
 var imgList = [
-	"../img/sample1.jpg",
+	"../img/OverView.jpg",
 	"../img/sample2.jpg",
 	"../img/sample3.jpg",
 	"../img/sample4.jpg",
@@ -12,7 +12,7 @@ for(var i = 0; i < imgList.length; i++) {
 	// li要素を取得
 	var slide = document.createElement("li");
 	// li要素の中に画像タグを埋め込む
-	slide.innerHTML = "<img width='800px' height='400px' src='" + imgList[i] + "'>";
+	slide.innerHTML = "<img width='1200px' height='600px' src='" + imgList[i] + "'>";
 	// li要素をクラス名「slider-inner」の子要素として追加
 	document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
