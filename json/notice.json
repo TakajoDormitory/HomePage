@@ -2,13 +2,11 @@
    "notice":[
     {
        "date":"2020.8.7",
-       "title":"testtitle",
-       "text":"testtext"
+       "title":"testtitle"
     },
     {
       "date":"2020.8.8",
-      "title":"testtitle2",
-      "text":"testtext2"
+      "title":"testtitle2"
    }
    ]
 }

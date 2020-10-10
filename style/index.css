@@ -1,4 +1,5 @@
-.top{
+.pair{
+    margin-top:60px;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
@@ -8,7 +9,6 @@
 }
 
 .department{
-    margin-top:40px;
     padding:0 20px;
     margin-left:6%;
     background-color: #A7212F;
@@ -41,26 +41,42 @@
 .department .autor{
     color:white;
 }
-.notice{
-    margin:auto;
+#notice-inner{
     width: 740px;
     height:400px;
     border:solid 3px black;
     overflow:auto;
 }
 
-.notice dt{
+#notice-inner dt{
     margin-left:5px;
     font-size: 1.5em;
+    color:#A7212F;
 }
-.notice-title{
-    margin-top:100px;
+#notice-inner dd{
+    font-size:1.25em;
+    word-wrap: break-word;
+}
+
+#notice-inner dd a{
+    text-decoration: none;
+    color:black;
+}
+
+#notice-inner dd a:hover{
+    color:#2997FF;
+}
+
+#notice-inner dl{
+    border-bottom: solid 0.5px black;
+}
+#notice-title{
     text-align: center;
 }
 
 
 
-.links{
+#links{
     padding-bottom:50px;
     display: -webkit-flex;
     display: flex;
@@ -70,10 +86,10 @@
     align-items: center;
 }
 #links-title{
-    margin-top:80px;
+    margin-top:40px;
     text-align: center;
 }
-.links p{
+#links p{
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
@@ -85,19 +101,24 @@
     height:84px;
     border:solid 1px gray;
 }
-.links a{
+#links a{
     color:black;
 }
-.links a:hover{
+#links a:hover{
     text-decoration: underline;
 }
 
-/* 以下スライダー用 */
+#links i{
 
+    margin-right: 10px;
+}
+
+/* 以下スライダー用 */
 .slider {
+    margin:auto;
     position: relative;
-    width: 800px;
-    height: 400px;
+    width: 1200px;
+    height: 600px;
     margin-top:20px;
 }
 
@@ -109,7 +130,6 @@
     height: 100%;
     padding-left:0;
 }
-
 .slider .slider-inner li {
     position: absolute;
     top: 0;
@@ -153,24 +173,24 @@
 }
 
 .slider .nav li:hover {
-    background: maroon
+    background: #A7212F
 }
 
 .slider .nav li.current {
-    background: maroon
+    background: #A7212F
 }
 
 
 .slider .arrow {
     position: absolute;
     top: 50%;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
-    width: 20px;
-    height: 60px;
-    background: #000;
+    width: 25px;
+    height: 75px;
+    background: #253965;
     color: #fff;
-    line-height: 60px;
+    line-height: 75px;
     padding: 5px;
     -webkit-transition: opacity 400ms;
     transition: opacity 400ms
@@ -191,4 +211,17 @@
     right: 0;
     -webkit-transform: translate(100%,-50%);
     transform: translate(100%,-50%)
+}
+
+/* 動画 */
+#movie{
+    color:white;
+    text-align: center;
+    margin: 2em 0;
+    padding:20px 0;
+    background: #253965;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+#movie span{
+    border-bottom: solid 2px #D59649;
 }

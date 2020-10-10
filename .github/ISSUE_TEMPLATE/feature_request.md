@@ -1,20 +1,16 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: リクエスト
+about: ''
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## リクエスト内容
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+* リクエスト内容を記述
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## リクエストした理由
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+* リクエストした理由を記述(サイトをよりよくするため、でも可)
