@@ -27,8 +27,8 @@ a{
 }
 
 .lang{
+    font-size:1em;
     color:black;
-    border-bottom: solid 1px black;
     margin-left:100px;
 }
 .lang:hover{
@@ -40,7 +40,7 @@ a{
 }
 
 .header .access{
-    border-bottom: solid 1px black;
+    font-size:1em;
     color:black;
     margin-left:30px;
 }
@@ -80,15 +80,20 @@ a{
     color:white;
 }
 
-#bar a:hover{
-    border-bottom: solid 1px white;
-}
 
 #site{
     color:white;
     text-align: center;
     text-decoration: underline;
 }
+
+.contents{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
+
+.result{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
 
 .footer{
     padding:50px 0;
