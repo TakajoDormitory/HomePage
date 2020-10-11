@@ -1,13 +1,11 @@
-
-
-
-
 // お知らせ
 
 $.getJSON('json/notice.json')
     .done(function (data) {
+        console.log("GetData!");
+        console.log(data);
         $.each(data,function(value){
-            $("#notice .list").append('<li><dl><dt>'+value.date+'</dt><dd><a href='+value.href+'>'+value.title+'</a></dd></dl></li>');
+            $("#notice .list").append('<li><dl><dt>'+value.date+'</dt><dd><a href="html/notice/'+value.href+'.html">'+value.title+'</a></dd></dl></li>');
         });
 });
 
