@@ -27,8 +27,8 @@ a{
 }
 
 .lang{
-    font-size:1em;
     color:black;
+    border-bottom: solid 1px black;
     margin-left:100px;
 }
 .lang:hover{
@@ -40,7 +40,7 @@ a{
 }
 
 .header .access{
-    font-size:1em;
+    border-bottom: solid 1px black;
     color:black;
     margin-left:30px;
 }
@@ -80,6 +80,9 @@ a{
     color:white;
 }
 
+#bar a:hover{
+    border-bottom: solid 1px white;
+}
 
 #site{
     color:white;
@@ -115,41 +118,3 @@ a{
 .btn-gnavi{
     display:none;
 }
-
-#page_top{
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    right:10%;
-    bottom: 40px;
-    border:solid 2px #D59649;
-    border-radius: 50%;
-  }
-  #page_top a{
-    position: relative;
-    display: block;
-    width: 80px;
-    height: 80px;
-    text-decoration: none;
-  }
-  #page_top a::before{
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f0d8';
-    font-size: 40px;
-    color:#D59649;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: -5px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-  }
-
-  #page_top a:hover{
-    transition: 0.5s;
-    opacity: 0.5;
-  }
