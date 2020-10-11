@@ -69,6 +69,14 @@ a{
     text-decoration: underline;
 }
 
+.contents{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
+
+.result{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
+
 .footer{
     padding:50px 0;
     background-color:#A7212F;
