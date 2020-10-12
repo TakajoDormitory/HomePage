@@ -21,24 +21,24 @@ a{
     align-items: center;
 }
 
-#lang{
-    color:black;
-    border-bottom: solid 1px black;
-    margin-left:100px;
+.header img:hover{
+    transition: 0.5s;
+    opacity: 0.5;
 }
-#lang:hover{
-    color:#2997FF;
+
+.header .lang{
+    display: none;
 }
-#access{
-    border-bottom: solid 1px black;
-    color:black;
-    margin-left:30px;
+
+.header .access{
+    display: none;
 }
-#access:hover{
-    color:#2997FF;
+
+.header .search{
+    display: none;
 }
-#search{
-    border:solid 1px black;
+
+#bar .search{
     margin-left:30px;
 }
 #bar{

@@ -1,12 +1,14 @@
 {
    "notice":[
     {
-       "date":"2020.8.7",
-       "title":"testtitle"
+       "date":"2020/8/7",
+       "title":"testtitle",
+       "href":"test"
     },
     {
-      "date":"2020.8.8",
-      "title":"testtitle2"
+      "date":"2020/8/8",
+      "title":"testtitle2",
+      "href":"test2"
    }
    ]
 }

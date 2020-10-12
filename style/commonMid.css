@@ -1,0 +1,159 @@
+body{
+    margin:0;
+    padding: 0;
+    font-style:normal;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#2997FF;
+}
+
+.header{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.header img:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.header .lang{
+    display: none;
+}
+
+.header .access{
+    display: none;
+}
+
+.header .search{
+    display: none;
+}
+
+#bar .search{
+    margin-left:30px;
+}
+#bar{
+    display:flex;
+    width: 100%;
+    height:50px;
+    margin:0;
+    background-color: #A7212F;
+    justify-content: center;
+}
+
+#bar li{
+    padding:10px 2em;
+    float: left;
+}
+
+#bar a{
+    color:white;
+}
+
+
+#site{
+    color:white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.footer{
+    padding:50px 0;
+    background-color:#A7212F;
+    color:white;
+    text-align: center;
+}
+#site:hover{
+    color:#2997FF;
+}
+
+#copyright{
+    text-align: center;
+}
+
+.middle{text-align: center;}
+#contact{margin-left: 40%;}
+
+
+/* 以下、ハンバーガーメニュー用 */
+#wrapper nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding-top: 50px;
+    background: rgba(33,33,33,.9);
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 2
+}
+
+#wrapper nav li {
+    padding: 20px 28px;
+}
+
+#wrapper .btn-gnavi {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 3;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+}
+
+#wrapper .btn-gnavi span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #666;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms
+}
+
+#wrapper .btn-gnavi span:nth-child(1) {
+    top: 0
+}
+
+#wrapper .btn-gnavi span:nth-child(2) {
+    top: 10px
+}
+
+#wrapper .btn-gnavi span:nth-child(3) {
+    top: 20px
+}
+
+#wrapper .btn-gnavi.open {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#wrapper .btn-gnavi.open span {
+    background: #fff
+}
+
+#wrapper .btn-gnavi.open span:nth-child(1) {
+    width: 24px;
+    -webkit-transform: translate(-7px,17px) rotate(45deg);
+    transform: translate(-7px,17px) rotate(45deg)
+}
+
+#wrapper .btn-gnavi.open span:nth-child(3) {
+    width: 24px;
+    -webkit-transform: translate(-7px,-17px) rotate(-45deg);
+    transform: translate(-7px,-17px) rotate(-45deg)
+}

@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet"> <!--Googleフォント-->
-  <link rel="stylesheet" href="../style/indexMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:1450px)"> <!--CSS(幅0px以上1450px以下)-->
-  <link rel="stylesheet" href="../style/index.css" type="text/css" media="screen and (min-width:1450px)"> <!--CSS(幅1450px以上)-->
+  <link rel="stylesheet" href="../style/indexMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:850px)"> <!--index用CSS-->
+  <link rel="stylesheet" href="../style/indexMid.css" type="text/css" media="screen and (min-width:850px) and (max-width:1450px)"> <!--index用CSS-->
+  <link rel="stylesheet" href="../style/index.css" type="text/css" media="screen and (min-width:1450px)"> <!--index用CSS-->
+  <link rel="stylesheet" href="../style/commonMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:850px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/commonMid.css" type="text/css" media="screen and (min-width:850px) and (max-width:1450px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/common.css" type="text/css" media="screen and (min-width:1450px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/bootstrap.min.css"> <!--bootstrap css　読み込み-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
   <link rel="icon" href="../img/icon.png" sizes="32x32" /> <!--サイトアイコン-->
   <link rel="icon" href="../Img/icon.png" sizes="192x192" /> <!--サイトアイコン-->
@@ -21,16 +26,14 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:site_name" content="Takajo dormitory" /> <!--タイトル-->
   <meta property="og:locale" content="ja_JP" /> <!--言語設定-->
-  <link rel="stylesheet" href="../style/commonMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:1450px)"> <!--共通CSS-->
-  <link rel="stylesheet" href="../style/common.css" type="text/css" media="screen and (min-width:1450px)"> <!--共通CSS-->
 </head>
 <body>
   <div id="page_top"><a href="#"></a></div>
   <div class="header">
     <a href="index.html"><img id="logo" src="../img/header.png" height="70px"></a>
-    <a href="../index.html"><h3 id="lang">日本語</h3></a>
-    <a href="location.html"><h3 id="access">Location</h3></a>
-    <form action="result.html" id="search">
+    <a href="../index.html"><h3 class="lang">日本語</h3></a>
+    <a href="location.html"><h3 class="access">Location</h3></a>
+    <form action="result.html" class="search">
       <input id="search-input" placeholder="Please enter the keyword" type="text" name="search-key">
       <input id="search-buttom" class="fas" type="submit" value="search" method="get">
     </form>
@@ -43,6 +46,14 @@
     </p>
     <nav id="bar">
       <ul>
+        <form action="result.html" class="search">
+        <li>
+          <input id="search-input" placeholder="Please enter the keyword" type="text" name="search-key">
+          <input id="search-buttom" class="fas" type="submit" value="search" method="get">
+        </li>
+        </form>
+        <li><a href="../html/contact.html"><h3 class="lang">日本語</h3></a></li>
+        <li><a href="location.html"><h3 class="access">Location</h3></a></li>
         <li><a href="purpose.html">Purpose of dormitory &gt;</a></li>
         <li><a href="facility.html">Facility &gt;</a></li>
         <li><a href="event.html">Event &gt;</a></li>
@@ -68,40 +79,10 @@
     <h2 id="notice-title">Recent Notice</h2>
     <section id="notice-inner">
       <ul class="list">
-        <li>
-          <dl>
-            <dt>10/10</dt>
-            <dd><a href="html/notice/test.html">[test配信]新型コロナウイルス感染症対策等について</a></dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>10/8</dt>
-            <dd><a href="html/notice/test.html">[test配信]寮のWi-Fi改修に伴う寮内Wi-Fiの停止について</a></dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>10/6</dt>
-            <dd><a href="html/notice/test.html">[test配信]高城寮ホームページのリニューアルについて</a></dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>10/5</dt>
-            <dd><a href="html/notice/test.html">[test配信]お知らせが二行の場合のテストです。ああああああああああああああああああああああああああああああああああああ</a></dd>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dt>10/4</dt>
-            <dd><a href="html/notice/test.html">[test配信]OverFlowの動作確認です！</a></dd>
-          </dl>
-        </li>
       </ul>
   </section>
   </div>
-  <div class="department">
+  <div id="department">
     <h2 class="title">Dormitory's Endeavors</h2>
     <a href="studying.html"><h3><i class="fas fa-graduation-cap"></i> Support for Studying</h3></a>
     <a href="env.html"><h3><i class="fas fa-broom"></i> Improve Enviroment</h3></a>
@@ -112,16 +93,16 @@
   </div>
   <div id="movie">
     <h2><span>Short Movie</span></h2>
-    <video src="../video/overView.mov" controls loop width="1000px"></video>
+    <video src="../video/overView.MP4" controls loop width="1000px"></video>
   </div>
   <h2 id="links-title">LINKS</h2>
-  <div class="links">
+  <div id="links">
     <p><a target="_blank" href="https://www.tokuyama.ac.jp/english/">Tokuyama College of Technology.</a></p>
     <p><a target="_blank" href="https://www.tokuyama.ac.jp/">徳山工業高等専門学校</a></p>
     <p><a target="_blank" href="https://www.kosen-k.go.jp/">National Institute of Technology</a></p>
     <p><a target="_blank" href="http://www.soumu.go.jp/kanku/chugoku/chugoku_kikan.html">Guide of Government Orginization</a></p>
   </div>
-  <div class="links">
+  <div id="links">
     <p><a target="_blank" href="https://www.facebook.com/tokuyamakousen/">Official facebook</a></p>
     <p><a target="_blank" href="https://www.facebook.com/%E5%BE%B3%E5%B1%B1%E9%AB%98%E5%B0%82%E5%9B%BD%E9%9A%9B%E4%BA%A4%E6%B5%81%E3%83%9A%E3%83%BC%E3%82%B8-1008019312619280/">International facebook</a></p>
     <p><a target="_blank" href="https://www.bikita.jp/class/index.php?cl=0f2b47">TCT Alumni association,Takajo Kai</a></p>

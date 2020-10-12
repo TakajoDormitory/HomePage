@@ -2,8 +2,10 @@
 <html lang="ja">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet"> <!--Googleフォント-->
-  <link rel="stylesheet" href="../style/commonMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:1450px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/commonMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:850px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/commonMid.css" type="text/css" media="screen and (min-width:850px) and (max-width:1450px)"> <!--共通CSS-->
   <link rel="stylesheet" href="../style/common.css" type="text/css" media="screen and (min-width:1450px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/bootstrap.min.css"> <!--bootstrap css　読み込み-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
   <link rel="icon" href="../img/icon.png" sizes="32x32" /> <!--サイトアイコン-->
   <link rel="icon" href="../Img/icon.png" sizes="192x192" /> <!--サイトアイコン-->
@@ -23,12 +25,11 @@
   <meta property="og:locale" content="ja_JP" /> <!--言語設定-->
 </head>
 <body>
-
   <div class="header">
     <a href="../index.html"><img id="logo" src="../img/header.png" height="70px"></a>
-    <a href="../en/studying.html"><h3 id="lang">ENGLISH</h3></a>
-    <a href="location.html"><h3 id="access">アクセス</h3></a>
-    <form action="result.html" id="search">
+    <a href="../en/studying.html"><h3 class="lang">ENGLISH</h3></a>
+    <a href="location.html"><h3 class="access">アクセス</h3></a>
+    <form action="result.html" class="search">
       <input id="search-input" placeholder="キーワードを入力" type="text" name="search-key">
       <input id="search-buttom" class="fas" type="submit" value="検索" method="get">
     </form>
@@ -39,8 +40,16 @@
       <span></span>
       <span></span>
     </p>
-    <div id="bar">
+    <nav id="bar">
       <ul>
+        <form action="result.html" class="search">
+        <li>
+            <input id="search-input" placeholder="キーワードを入力" type="text" name="search-key">
+            <input id="search-buttom" class="fas" type="submit" value="検索" method="get">
+        </li>
+        </form>
+        <li><a href="../en/index.html"><h3 class="lang">ENGLISH</h3></a></li>
+        <li><a href="location.html"><h3 class="access">アクセス</h3></a></li>
         <li><a href="purpose.html">寮の目的 &gt;</a></li>
         <li><a href="facility.html">施設,設備 &gt;</a></li>
         <li><a href="event.html">寮生活 &gt;</a></li>
@@ -50,7 +59,7 @@
         <li><a href="../belonging/index.html">寮生用ページ &gt;</a></li>
         <li><a href="contact.html">お問い合わせ &gt;</a></li>
       </ul>
-    </div>
+    </nav>
   </div>
 
   <div class="footer">
