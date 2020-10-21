@@ -9,15 +9,16 @@
 }
 
 #department{
+    width: 250px;
+    margin-top:75px;
     padding:0 20px;
-    margin-left:6%;
+    margin-left:75px;
     background-color: #A7212F;
     border-radius: 14px;
     height:400px;
 }
 
-#department .title{
-    border-bottom:solid 1px white;
+#department h2{
     font-size: 1.2em;
     padding: 4px;
     text-align: center;
@@ -25,6 +26,11 @@
     letter-spacing: 0.05em;
     color:white;
 }
+
+#department .title{
+    border-bottom:solid 1px white;
+}
+
 #department a{color:black;}
 #department h3{
     padding: 0.5em 1em;
@@ -75,6 +81,9 @@
 }
 
 
+#links{
+    margin:50px 0;
+}
 
 .links-inner{
     padding-bottom:50px;
@@ -97,7 +106,7 @@
     -webkit-align-items: center;
     align-items: center;
     margin:0 20px;
-    width:258px;
+    width:250px;
     height:84px;
     border:solid 1px gray;
 }
@@ -117,8 +126,8 @@
 .slider {
     margin:auto;
     position: relative;
-    width: 1200px;
-    height: 600px;
+    width: 1066px;
+    height: 533px;
     margin-top:20px;
 }
 
@@ -226,8 +235,10 @@
     border-bottom: solid 2px #D59649;
 }
 
-#movie video{
-    width:1000px;
+#movie #inner-video{
+    width:1066px;
+    height: 599.625px;
+    border-radius: 10px;
 }
 
 #page_top{
@@ -239,6 +250,7 @@
     border:solid 2px #D59649;
     border-radius: 50%;
   }
+  
   #page_top a{
     position: relative;
     display: block;
@@ -246,6 +258,7 @@
     height: 80px;
     text-decoration: none;
   }
+
   #page_top a::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;

@@ -19,6 +19,8 @@ a{
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
+    border-bottom: solid 10px #A7212F;
+    margin-bottom:20px;
 }
 
 .header img:hover{
@@ -70,9 +72,17 @@ a{
 }
 
 .footer{
-    padding:50px 0;
+    text-align: center;
+    padding:20px 0;
     background-color:#A7212F;
     color:white;
+}
+
+.footer img{
+    margin:auto
+}
+
+.footer a{
     text-align: center;
 }
 #site:hover{
@@ -86,6 +96,13 @@ a{
 .middle{text-align: center;}
 #contact{margin-left: 40%;}
 
+#logo{
+    width: 350px;
+}
+
+.footer img{
+    width: 200px;
+}
 
 /* 以下、ハンバーガーメニュー用 */
 #wrapper nav {
@@ -94,16 +111,18 @@ a{
     right: -300px;
     width: 300px;
     height: 100%;
-    padding-top: 50px;
-    background: rgba(33,33,33,.9);
+    padding-top: 100px;
+    background: #253965;
     font-size: 16px;
     box-sizing: border-box;
-    z-index: 2
+    z-index: 2;
+    overflow-y: scroll;
 }
 
 #wrapper nav li {
-    padding: 20px 28px;
+    margin:10px auto;
 }
+
 
 #wrapper .btn-gnavi {
     position: fixed;
@@ -122,7 +141,7 @@ a{
     position: absolute;
     width: 30px;
     height: 4px;
-    background: #666;
+    background-color: #696969;
     border-radius: 10px;
     -webkit-transition: all 400ms;
     transition: all 400ms
@@ -159,4 +178,13 @@ a{
     width: 24px;
     -webkit-transform: translate(-7px,-17px) rotate(-45deg);
     transform: translate(-7px,-17px) rotate(-45deg)
+}
+
+#bar .lang{
+    padding:5px;
+    border:solid 1px white;
+}
+
+#bar h3{
+    margin:0
 }
