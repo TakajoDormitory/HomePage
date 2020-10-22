@@ -69,6 +69,7 @@ a{
     margin:0;
     background-color: #A7212F;
     justify-content: center;
+    margin-bottom:20px;
 }
 
 #bar li{
@@ -99,11 +100,12 @@ a{
   }
 
 .footer{
-    padding:50px 0;
+    padding:20px 0 10px 0;
     background-color:#A7212F;
     color:white;
     text-align: center;
 }
+
 #site:hover{
     color:#2997FF;
 }
@@ -117,4 +119,12 @@ a{
 
 .btn-gnavi{
     display:none;
+}
+
+#logo{
+    height:70px;
+}
+
+.footer img{
+    height:70px;
 }
