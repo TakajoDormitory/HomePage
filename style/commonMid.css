@@ -194,17 +194,17 @@ a{
     margin:0;
 }
 
-#list{
+.list{
     width: 350px;
     margin:auto;
 }
 
-#list li{
+.list li{
     color:black;
     list-style:initial;
 }
 
-#list li:hover{
+.list li:hover{
     color:#2997FF
 }
 

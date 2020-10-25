@@ -192,12 +192,12 @@ a{
     margin:0
 }
 
-#list{
+.list{
     width: 350px;
     margin:auto;
 }
 
-#list li{
+.list li{
     color:#2997FF;
     list-style:initial;
 }
