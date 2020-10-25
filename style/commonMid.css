@@ -211,6 +211,7 @@ a{
 .main{
     width:800px;
     margin:auto;
+    margin-bottom: 50px;
 }
 
 .main h2{
@@ -225,8 +226,12 @@ a{
 }
 
 #share{
+    display: -webkit-flex;
     display: flex;
-    
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;   
 }
 
 #share .twitter-share-button{
