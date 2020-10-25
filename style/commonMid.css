@@ -194,17 +194,17 @@ a{
     margin:0;
 }
 
-#list{
+.list{
     width: 350px;
     margin:auto;
 }
 
-#list li{
+.list li{
     color:black;
     list-style:initial;
 }
 
-#list li:hover{
+.list li:hover{
     color:#2997FF
 }
 
@@ -230,8 +230,6 @@ a{
     display: flex;
     -webkit-justify-content: flex-end;
     justify-content: flex-end;
-    -webkit-align-items: flex-end;
-    align-items: flex-end;   
 }
 
 #share .twitter-share-button{
