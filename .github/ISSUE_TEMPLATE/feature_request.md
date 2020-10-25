@@ -1,6 +1,6 @@
 ---
 name: リクエスト
-about: ''
+about: リクエスト
 title: ''
 labels: ''
 assignees: ''
