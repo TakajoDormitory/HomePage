@@ -2,7 +2,7 @@ $(function(){
     $.getJSON("../json/notice.json",function(data){
         console.log(data);
         for(let i=data.length-1;i>=0;i--){
-        $("#list").append($('<li><dl><dt>'+data[i].date+'</dt><dd><a href="html/notice/'+data[i].href+'.html">'+data[i].title+'</a></dd></dl></li>'));
+        $("#list").append($('<li><dl><dt>'+data[i].date+'</dt><dd><a href="../html/notice/'+data[i].href+'.html">'+data[i].title+'</a></dd></dl></li>'));
     }
 });
 
