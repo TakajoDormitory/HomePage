@@ -4,7 +4,7 @@ let imgList = [
 	"img/sample2.jpg",
 	"img/sample3.jpg",
 	"img/sample4.jpg",
-	"img/sample5.jpg",
+	"img/sample5.jpg"
 ];
 
 // 画像とナビの要素を自動で追加

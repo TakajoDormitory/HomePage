@@ -207,3 +207,28 @@ a{
 #list li:hover{
     color:#2997FF
 }
+
+.main{
+    width:800px;
+    margin:auto;
+}
+
+.main h2{
+    text-align: center;
+    border-bottom:solid 2px black;
+    margin-bottom: 40px;
+}
+
+.main p{
+    line-break: auto;
+    font-size: 1.1em;
+}
+
+#share{
+    display: flex;
+    
+}
+
+#share .twitter-share-button{
+    margin-right: 4px;
+}

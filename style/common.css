@@ -160,3 +160,12 @@ a{
     line-break: auto;
     font-size: 1.1em;
 }
+
+#share{
+    display: flex;
+    
+}
+
+#share .twitter-share-button{
+    margin-right: 4px;
+}
