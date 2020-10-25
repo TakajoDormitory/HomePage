@@ -2,7 +2,7 @@ body{
     margin:0;
     padding: 0;
     font-style:normal;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 li{
     list-style: none;
@@ -21,26 +21,46 @@ a{
     align-items: center;
 }
 
-#lang{
+.header img:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.lang{
     color:black;
     border-bottom: solid 1px black;
     margin-left:100px;
 }
-#lang:hover{
+.lang:hover{
     color:#2997FF;
 }
-#access{
+
+#bar .lang{
+    display:none;
+}
+
+.header .access{
     border-bottom: solid 1px black;
     color:black;
     margin-left:30px;
 }
-#access:hover{
+.header .access:hover{
     color:#2997FF;
 }
-#search{
-    border:solid 1px black;
+
+#bar .access{
+    display: none;
+}
+
+
+.header .search{
     margin-left:30px;
 }
+
+#bar .search{
+    display:none;
+}
+
 #bar{
     display:flex;
     width: 100%;
@@ -48,6 +68,7 @@ a{
     margin:0;
     background-color: #A7212F;
     justify-content: center;
+    margin-bottom:20px;
 }
 
 #bar li{
@@ -69,12 +90,21 @@ a{
     text-decoration: underline;
 }
 
+.contents{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
+
+.result{
+    padding: 30px 30px 50px 30px; /*上・右・下・左*/
+  }
+
 .footer{
-    padding:50px 0;
+    padding:20px 0 10px 0;
     background-color:#A7212F;
     color:white;
     text-align: center;
 }
+
 #site:hover{
     color:#2997FF;
 }
@@ -84,42 +114,61 @@ a{
 }
 
 .middle{text-align: center;}
-#contact{margin-left: 40%;}
+#contact{
+    width: 250px;
+    margin:auto;
+}
 
 .btn-gnavi{
     display:none;
 }
 
-#page_top{
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    right: 40px;
-    bottom: 40px;
-    background: #D59649;
-    opacity: 0.8;
-    border-radius: 50%;
-  }
-  #page_top a{
-    position: relative;
-    display: block;
-    width: 80px;
-    height: 80px;
-    text-decoration: none;
-  }
-  #page_top a::before{
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f0d8';
-    font-size: 40px;
-    color: #fff;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: -5px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
+#logo{
+    height:70px;
+}
+
+.footer img{
+    height:70px;
+}
+
+.list{
+    width: 350px;
+    margin:auto;
+}
+
+.list li{
+    color:black;
+    list-style:initial;
+}
+
+.list li:hover{
+    color:#2997FF
+}
+
+.main{
+    width:800px;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+.main h2{
     text-align: center;
-  }
+    border-bottom:solid 2px black;
+    margin-bottom: 40px;
+}
+
+.main p{
+    line-break: auto;
+    font-size: 1.1em;
+}
+
+#share{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+#share .twitter-share-button{
+    margin-right: 4px;
+}

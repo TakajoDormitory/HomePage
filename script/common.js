@@ -1,7 +1,7 @@
 $(function(){
 	$(".btn-gnavi").on("click", function(){
 		// ハンバーガーメニューの位置を設定するための変数
-		var rightVal = 0;
+		let rightVal = 0;
 		if($(this).hasClass("open")) {
 			// 「open」クラスを持つ要素はメニューを開いた状態に設定
 			rightVal = -300;

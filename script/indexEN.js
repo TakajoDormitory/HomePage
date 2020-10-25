@@ -1,17 +1,12 @@
-
-
-
-// 以下、お知らせ用
-
-$.getJSON('json/notice.json')
-    .done(function (data) {
-        $.each(data,function(value){
-            $("#notice .list").append('<li><dl><dt>'+value.date+'</dt><dd>'+value.title+'</dd></dl></li>');
-        });
+$(function(){
+    $.getJSON("../json/notice.json",function(data){
+        console.log(data);
+        for(let i=data.length-1;i>=0;i--){
+        $("#list").append($('<li><dl><dt>'+data[i].date+'</dt><dd><a href="../html/notice/'+data[i].href+'.html">'+data[i].title+'</a></dd></dl></li>'));
+    }
 });
 
-// topボタン
-$(function() {
+    // トップへ戻るボタン
     let pagetop = $('#page_top');   
     pagetop.hide();
     $(window).scroll(function () {
