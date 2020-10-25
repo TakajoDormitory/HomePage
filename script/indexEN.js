@@ -1,11 +1,10 @@
-$(function() {
-    // お知らせ
-    $.getJSON("json/notice.json",function(data){
+$(function(){
+    $.getJSON("../json/notice.json",function(data){
         console.log(data);
         for(let i=data.length-1;i>=0;i--){
         $("#list").append($('<li><dl><dt>'+data[i].date+'</dt><dd><a href="html/notice/'+data[i].href+'.html">'+data[i].title+'</a></dd></dl></li>'));
     }
-    });
+});
 
     // トップへ戻るボタン
     let pagetop = $('#page_top');   

@@ -2,7 +2,7 @@ body{
     margin:0;
     padding: 0;
     font-style:normal;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 li{
     list-style: none;
@@ -41,7 +41,9 @@ a{
     display: none;
 }
 
-
+#bar .search{
+    margin-right: 40px;
+}
 
 #bar li{
     padding:10px 2em;
@@ -82,7 +84,10 @@ a{
 }
 
 .middle{text-align: center;}
-#contact{margin-left: 40%;}
+#contact{
+    width: 250px;
+    margin:auto;
+}
 
 
 #logo{
@@ -187,4 +192,48 @@ a{
 
 #bar h3{
     margin:0;
+}
+
+#list{
+    width: 350px;
+    margin:auto;
+}
+
+#list li{
+    color:black;
+    list-style:initial;
+}
+
+#list li:hover{
+    color:#2997FF
+}
+
+.main{
+    width:800px;
+    margin:auto;
+    margin-bottom: 50px;
+}
+
+.main h2{
+    text-align: center;
+    border-bottom:solid 2px black;
+    margin-bottom: 40px;
+}
+
+.main p{
+    line-break: auto;
+    font-size: 1.1em;
+}
+
+#share{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;   
+}
+
+#share .twitter-share-button{
+    margin-right: 4px;
 }
