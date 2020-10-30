@@ -48,7 +48,7 @@
     color:white;
 }
 #notice-inner{
-    width: 740px;
+    width: 700px;
     height:400px;
     border:solid 3px black;
     background-color: #fcf7f7;
@@ -129,9 +129,8 @@
 .slider {
     margin:auto;
     position: relative;
-    width: 1066px;
-    height: 533px;
-    margin-top:20px;
+    width: 1000px;
+    height: 400px;
 }
 
 .slider .slider-inner {
