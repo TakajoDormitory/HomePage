@@ -1,10 +1,10 @@
 // 表示する画像の配列
 let imgList = [
 	"../img/OverView.jpg",
-	"../img/sample2.jpg",
-	"../img/sample3.jpg",
-	"../img/sample4.jpg",
-	"../img/sample5.jpg",
+	"../img/BBQ.jpg",
+	"../img/CherryBlossom.jpg",
+	"../img/soccer.jpg",
+	"../img/GetTail.jpg"
 ];
 
 // 画像とナビの要素を自動で追加
@@ -13,7 +13,7 @@ for(let i = 0; i < imgList.length; i++) {
 	let slide = document.createElement("li");
 	// li要素の中に画像タグを埋め込む
 	if(window.innerWidth<1450) slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
-	else slide.innerHTML = "<img width='1066px' height='533px' src='" + imgList[i] + "'>";
+	else slide.innerHTML = "<img width='1000px' height='400px' src='" + imgList[i] + "'>";
 	// li要素をクラス名「slider-inner」の子要素として追加
 	document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
