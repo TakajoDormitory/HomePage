@@ -2,7 +2,7 @@
     margin:auto;
     position: relative;
     width: 100%;
-    margin-bottom: 60vw;
+    margin-bottom: 55vw;
 }
 
 .slider .slider-inner {
@@ -42,7 +42,7 @@
     cursor: pointer;
     width: 20px;
     height: 20px;
-    margin-top:25vw;
+    margin-top:20vw;
     z-index:1;
     background: #253965;
     color: #fff;
@@ -118,7 +118,6 @@
     color:#A7212F;
 }
 #notice-inner dd{
-    margin-right: 40px;
     font-size:1em;
     word-wrap: break-word;
 }

@@ -22,7 +22,6 @@ a{
     border-bottom: solid 10px #A7212F;
     margin-bottom:20px;
 }
-
 .header img:hover{
     transition: 0.5s;
     opacity: 0.5;
@@ -119,7 +118,6 @@ a{
     font-size: 16px;
     box-sizing: border-box;
     z-index: 2;
-    overflow-y: scroll;
 }
 
 #wrapper nav li {
