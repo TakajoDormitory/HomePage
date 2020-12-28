@@ -1,9 +1,9 @@
 ---
 name: バグの報告
-about: ''
+about: バグの報告
 title: ''
 labels: ''
-assignees: ''
+assignees: shebang-sh
 
 ---
 
