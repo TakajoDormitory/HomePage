@@ -49,7 +49,7 @@
 
 #notice-inner{
     width: 400px;
-    height:400px;
+    height:320px;
     border:solid 3px black;
     background-color: #fcf7f7;
     overflow:auto;
@@ -80,6 +80,7 @@
     border-bottom: solid 0.5px black;
 }
 #notice-title{
+    margin-top:80px;
     text-align: center;
 }
 

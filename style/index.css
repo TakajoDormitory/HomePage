@@ -282,3 +282,7 @@
     transition: 0.5s;
     opacity: 0.5;
   }
+
+  #sns{
+      text-align: center;
+  }
