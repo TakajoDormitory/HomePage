@@ -80,7 +80,7 @@
     border-bottom: solid 0.5px black;
 }
 #notice-title{
-    text-align: center;
+    opacity: 0;
 }
 
 

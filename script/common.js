@@ -1,3 +1,15 @@
+//og:urlの値を自動設定
+let metaDiscre = document.head.children;
+let metaLength = metaDiscre.length;
+for(let i = 0;i < metaLength;i++){
+	let proper = metaDiscre[i].getAttribute('property');
+	if(proper === 'og:url'){
+		let dis = metaDiscre[i];
+		dis.setAttribute('content',location.href);
+	}
+}
+
+
 $(function(){
 	$(".btn-gnavi").on("click", function(){
 		// ハンバーガーメニューの位置を設定するための変数
