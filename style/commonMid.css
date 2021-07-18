@@ -20,6 +20,7 @@ a{
 
 #bar li{
     padding:10px 2em;
+    font-size: 18px;
     float: left;
 }
 
@@ -182,6 +183,10 @@ a{
     left:0;
     width:100%;
     z-index: 2;
+    transition: 0.5s;
+}
+#header:hover{
+    background-color: white;
 }
 /*見出し設定*/
 #header h1,#header i{
