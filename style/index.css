@@ -1,5 +1,5 @@
+@charset "utf-8";
 .pair{
-    margin-top:60px;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
@@ -18,8 +18,8 @@
     height:400px;
 }
 
-#department h2{
-    font-size: 1.2em;
+#department h1{
+    font-size: 22px;
     padding: 4px;
     text-align: center;
     font-weight: bold;
@@ -81,11 +81,13 @@
 }
 #notice-title{
     text-align: center;
+    font-size:28px;
 }
 
-
+/* 各種SNS */
 #links{
-    margin:50px 0;
+    margin:100px 0 50px 0;
+    text-align: center;
 }
 
 .links-inner{
@@ -97,9 +99,9 @@
     -webkit-align-items: center;
     align-items: center;
 }
+
 #links-title{
     margin-top:40px;
-    text-align: center;
 }
 .links-inner p{
     display: -webkit-flex;
@@ -125,12 +127,124 @@
     margin-right: 10px;
 }
 
+
+#page_top{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right:10%; 
+    bottom: 40px;
+    border:solid 2px #D59649;
+    border-radius: 50%;
+    background-color: rgba(213,150,73,0.8);
+  }
+  
+
+
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0d8';
+    font-size: 40px;
+    color:white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  #page_top a:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+  }
+
+#video-area{
+    z-index: -1;
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height: 100vh;/*高さを全画面にあわせる*/
+}
+
+#video-origin{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#video-area h1{
+    padding-left: 40px;
+    font-size:80px;
+    top: 60vh;
+    left:70vw;
+    width: 550px;
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color:#ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+  background:#fff;
+  padding:100px 0 0px 0;
+}
+
+#header h1,#header i{
+    color: #fff;
+}
+#wrapper .btn-gnavi span{
+    background-color: #fff;
+}
+
+#header{
+    transition: all  0.3s ease;
+}
+#header:hover{
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
 /* 以下スライダー用 */
 .slider {
     margin:auto;
     position: relative;
-    width: 1000px;
-    height: 400px;
+    width: 800px;
+    height: 450px;
+}
+
+#slider-title{
+    margin-top:100px;
+    text-align: center;
+}
+
+#slider-content{
+    margin:auto;
+    margin-top:50px;
+    width: 800px;
 }
 
 .slider .slider-inner {
@@ -197,8 +311,6 @@
     top: 50%;
     font-size: 25px;
     cursor: pointer;
-    width: 25px;
-    height: 75px;
     background: #253965;
     color: #fff;
     line-height: 75px;
@@ -242,43 +354,3 @@
     height: 599.625px;
     border-radius: 10px;
 }
-
-#page_top{
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    right:10%;
-    bottom: 40px;
-    border:solid 2px #D59649;
-    border-radius: 50%;
-  }
-  
-  #page_top a{
-    position: relative;
-    display: block;
-    width: 80px;
-    height: 80px;
-    text-decoration: none;
-  }
-
-  #page_top a::before{
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    content: '\f0d8';
-    font-size: 40px;
-    color:#D59649;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: -5px;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    text-align: center;
-  }
-
-  #page_top a:hover{
-    transition: 0.5s;
-    opacity: 0.5;
-  }
