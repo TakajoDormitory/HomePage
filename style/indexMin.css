@@ -1,8 +1,80 @@
+@charset "utf-8";
+
+
+#video-area {
+    z-index: -1;
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    height:50vh
+}
+
+#video-origin{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+#video-area h1{
+    padding-left: 20px;
+    font-size:44px;
+    top:35vh;
+    left:40vw;
+    width: 300px;
+    /*要素の配置*/
+    position:absolute;
+    /*要素を天地中央寄せ*/
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color:#ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+#container{
+  background:#fff;
+  padding:100px 0 0px 0;
+}
+
+#header h1,#header i{
+    color: #fff;
+}
+
+#wrapper .btn-gnavi span{
+    background-color: #fff;
+}
+
 .slider {
     margin:auto;
     position: relative;
     width: 100%;
     margin-bottom: 55vw;
+}
+#slider-title{
+    margin-top:100px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#slider-content{
+    margin:auto;
+    margin-top:70vw;
+    width: 80vw;
 }
 
 .slider .slider-inner {
@@ -42,7 +114,7 @@
     cursor: pointer;
     width: 20px;
     height: 20px;
-    margin-top:20vw;
+    margin-top:30vw;
     z-index:1;
     background: #253965;
     color: #fff;
@@ -76,7 +148,7 @@
     height:400px;
 }
 
-#department h2{
+#department h1{
     font-size: 1.2em;
     padding: 4px;
     text-align: center;
@@ -157,29 +229,37 @@
 }
 
 
+/* 各種SNS */
 #links{
     margin:auto;
     width: 100%;
-}
-
-
-#links-title{
-    margin-top:40px;
     text-align: center;
+    margin-bottom: 100px;
 }
+
 .links-inner{
-    text-align: center;
-}
-.links-inner p{
-    text-align: center;
+    padding-bottom:50px;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-    margin:20px auto;
-    width:258px;
+}
+
+#links-title{
+    margin-top:40px;
+    font-size: 1.5em;
+}
+.links-inner p{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    margin:0 20px;
+    width:250px;
     height:84px;
     border:solid 1px gray;
 }
@@ -191,5 +271,42 @@
 }
 
 .links-inner i{
-    display: none;
+    color:#1877F2;
+    margin-right: 10px;
 }
+
+
+#page_top{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right:10%; 
+    bottom: 40px;
+    border:solid 2px #D59649;
+    border-radius: 50%;
+    background-color: rgba(213,150,73,0.8);
+  }
+  
+
+
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f0d8';
+    font-size: 40px;
+    color:white;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  #page_top a:hover{
+    transition: 0.5s;
+    opacity: 0.5;
+  }

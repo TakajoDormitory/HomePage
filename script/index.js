@@ -23,4 +23,16 @@ pagetop.click(function () {
     }, 500); //0.5秒でトップへ移動
     return false;
 });
+
+// header
+let header = $('#header');
+let videoArea= $('#video-area');
+$(window).scroll(function () {
+    if ($(this).scrollTop() > videoArea.height()-150) {
+        header.css({'background-color':'rgba(0, 0, 0, 0.75)','transition':'0.5s'});
+    }
+    else {
+        header.css({'background-color':'rgba(0, 0, 0, 0)'});
+    }
+});
 });

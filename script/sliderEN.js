@@ -13,7 +13,7 @@ for(let i = 0; i < imgList.length; i++) {
 	let slide = document.createElement("li");
 	// li要素の中に画像タグを埋め込む
 	if(window.innerWidth<1450) slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
-	else slide.innerHTML = "<img width='1000px' height='400px' src='" + imgList[i] + "'>";
+	else slide.innerHTML = "<img width='800px' height='450px' src='" + imgList[i] + "'>";
 	// li要素をクラス名「slider-inner」の子要素として追加
 	document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 

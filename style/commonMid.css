@@ -12,34 +12,7 @@ a{
     color:#2997FF;
 }
 
-.header{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-align-items: center;
-    align-items: center;
-    padding-bottom: 10px;
-    border-bottom: solid 50px #A7212F;
-    margin-bottom:20px;
-}
 
-.header img:hover{
-    transition: 0.5s;
-    opacity: 0.5;
-}
-
-.header .lang{
-    display: none;
-}
-
-.header .access{
-    display: none;
-}
-
-.header .search{
-    display: none;
-}
 
 #bar .search{
     margin-right: 40px;
@@ -65,37 +38,42 @@ a{
     padding:20px 0;
     background-color:#A7212F;
     color:white;
-}
-
-.footer img{
-    margin-left: 40%;
-}
-
-.footer a{
     text-align: center;
 }
+
 
 #site:hover{
     color:#2997FF;
 }
 
-#copyright{
-    text-align: center;
-}
-
-.middle{text-align: center;}
-#contact{
-    width: 250px;
-    margin:auto;
-}
-
-
-#logo{
-    height:70px;
-}
 
 .footer img{
     height:70px;
+}
+
+.list{
+    width: 350px;
+    margin:auto;
+}
+
+.list li{
+    color:black;
+    list-style:initial;
+}
+
+.list li:hover{
+    color:#2997FF
+}
+
+#share{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+
+#share .twitter-share-button{
+    margin-right: 4px;
 }
 
 /* 以下、ハンバーガーメニュー用 */
@@ -133,7 +111,7 @@ a{
     position: absolute;
     width: 30px;
     height: 4px;
-    background: #666;
+    background: #000;
     border-radius: 10px;
     -webkit-transition: all 400ms;
     transition: all 400ms
@@ -194,44 +172,61 @@ a{
     margin:0;
 }
 
-.list{
-    width: 350px;
-    margin:auto;
+
+
+/* 以下、ヘッダー */
+#header{
+    padding:50px 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 2;
+}
+/*見出し設定*/
+#header h1,#header i{
+    /*要素の配置*/
+    position:absolute;
+    top: 25px;
+    /*要素を天地中央寄せ*/
+    transform: translateY(-50%) translateX(-50%);
+    /*見た目の調整*/
+    color:#000;
+    -ms-user-select: none; /* IE 10+ */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-.list li{
-    color:black;
-    list-style:initial;
+#header i{top: 40px;}
+
+#header #title{
+    left:180px;
 }
 
-.list li:hover{
-    color:#2997FF
+#header #lang{
+    position: fixed;
+    right: 100px;
+    font-size: 21px;
+    width: auto;
+
 }
 
-.main{
-    width:800px;
-    margin:auto;
-    margin-bottom: 50px;
+#header .fa-map-marker-alt{
+    position: fixed;
+    right: 100px;
+    font-size: 21px;
+    width: auto;
 }
 
-.main h2{
-    text-align: center;
-    border-bottom:solid 2px black;
-    margin-bottom: 40px;
+#header .fa-search{
+    position: fixed;
+    right: 60px;
+    font-size: 21px;
+    width: auto;
 }
 
-.main p{
-    line-break: auto;
-    font-size: 1.1em;
-}
-
-#share{
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    justify-content: flex-end;
-}
-
-#share .twitter-share-button{
-    margin-right: 4px;
+#container{
+    margin-top:100px;
 }

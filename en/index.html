@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet"> <!--Googleフォント-->
-  <link rel="stylesheet" href="../style/indexMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:870px)"> <!--index用CSS-->
-  <link rel="stylesheet" href="../style/indexMid.css" type="text/css" media="screen and (min-width:870px) and (max-width:1500px)"> <!--index用CSS-->
-  <link rel="stylesheet" href="../style/index.css" type="text/css" media="screen and (min-width:1500px)"> <!--index用CSS-->
   <link rel="stylesheet" href="../style/commonMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:870px)"> <!--共通CSS-->
-  <link rel="stylesheet" href="../style/commonMid.css" type="text/css" media="screen and (min-width:870px) and (max-width:1500px)"> <!--共通CSS-->
-  <link rel="stylesheet" href="../style/common.css" type="text/css" media="screen and (min-width:1500px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/commonMid.css" type="text/css" media="screen and (min-width:870px) and (max-width:1150px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/common.css" type="text/css" media="screen and (min-width:1150px)"> <!--共通CSS-->
+  <link rel="stylesheet" href="../style/indexMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:870px)"> <!--index用CSS-->
+  <link rel="stylesheet" href="../style/indexMid.css" type="text/css" media="screen and (min-width:870px) and (max-width:1150px)"> <!--index用CSS-->
+  <link rel="stylesheet" href="../style/index.css" type="text/css" media="screen and (min-width:1150px)"> <!--index用CSS-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
   <link rel="icon" href="../img/icon.png" sizes="32x32" /> <!--サイトアイコン-->
   <link rel="icon" href="../Img/icon.png" sizes="192x192" /> <!--サイトアイコン-->
@@ -21,21 +21,24 @@
   <meta property="og:title" content="Takajo dormitory"/> <!--タイトル-->
   <meta property="og:type" content="website">
   <meta property="og:description" content="Official HomePage of Takajo Dormitory." /> <!--簡易説明-->
-  <meta property="og:image" content="https://github.com/TakajoDormitory/HomePage/blob/master/img/icon.png" /> <!--サイトアイコンURL-->
+  <meta property="og:image" content="https://github.com/TakajoDormitory/HomePage/blob/master/../img/icon.png" /> <!--サイトアイコンURL-->
   <meta name="twitter:card" content="summary" />
   <meta property="twitter:site" content="@TakajoDormitory">
   <meta property="og:site_name" content="Takajo dormitory" /> <!--タイトル-->
   <meta property="og:locale" content="ja_JP" /> <!--言語設定-->
 </head>
 <body>
-  <div id="page_top"><a href="#"></a></div>
-  <div class="header">
-    <a href="index.html"><img id="logo" src="../img/header.png"></a>
-    <a href="../index.html"><h3 class="lang">日本語</h3></a>
-    <a href="location.html"><h3 class="access">Location</h3></a>
-    <div class="search">
-      <script async src="https://cse.google.com/cse.js?cx=2af17a87c0426de29"></script>
-      <div class="gcse-search"></div>
+  <!--header-->
+  <header id="header">
+      <a href="#"><h1 id="title">Takajo Dormitory</h1></a>
+        <a href="../index.html"><h1 id="lang">JAPANESE</h3></a>
+        <a href="location.html"><i class="fas fa-map-marker-alt"></i></a>
+        <i class="fas fa-search"></i>
+  </header>
+  <div id="video-area">
+    <h1>WELCOME TO TAKAJO</h1>
+    <div id="video-origin">
+      <video id="video" src="../img/OverView.mp4" type="video/mp4" poster="../img/OverView.jpg" webkit-playsinline playsinline muted autoplay loop></video>
     </div>
   </div>
   <div id="wrapper">
@@ -61,6 +64,28 @@
       </ul>
     </nav>
   </div>
+  <!--container-->
+  <div id="container">
+    <div id="page_top"><a href="#"></a></div>
+    <div class="pair">
+      <div id="notice">
+      <h2 id="notice-title">Recent Notice</h2>
+      <section id="notice-inner">
+        <ul id="list">
+        </ul>
+    </section>
+  </div>
+    <div id="department">
+      <h1><span class="title">Endeavors</span></h1>
+      <a href="studying.html"><h3><i class="fas fa-graduation-cap"></i> Support Education</h3></a>
+      <a href="env.html"><h3><i class="fas fa-broom"></i> Improve Enviroment</h3></a>
+      <a href="meet.html"><h3><i class="fas fa-futbol"></i> Exchange Event</h3></a>
+      <a href="safety.html"><h3><i class="fas fa-running"></i> For Safety</h3></a>
+      <a href="it.html"><h3><i class="fas fa-laptop-code"></i> Utilization IT</h3></a>
+    </div>
+  </div>
+  
+  <h1 id="slider-title">LIVING WITH FRIENDS</h1>
   <div class="slider">
     <ul class="slider-inner">
     </ul>
@@ -69,45 +94,29 @@
     <p id="arrow-prev" class="arrow">←</p>
     <p id="arrow-next" class="arrow">→</p>
   </div>
+  <p id="slider-content">Dormitory student will be good friend with others through Tanabata party,sports event,and more exchange event.<br><a href="event.html">EVENT→</a></p>
 
-  <div class="pair">
-
-    <div id="notice">
-    <h2 id="notice-title">Recent Notice</h2>
-    <section id="notice-inner">
-      <ul id="list">
-      </ul>
-  </section>
-  </div>
-  <div id="department">
-    <h2 class="title">Dormitory's Endeavors</h2>
-    <a href="studying.html"><h3><i class="fas fa-graduation-cap"></i> Support Education</h3></a>
-    <a href="env.html"><h3><i class="fas fa-broom"></i> Improve Enviroment</h3></a>
-    <a href="meet.html"><h3><i class="fas fa-futbol"></i>  Exchange Event</h3></a>
-    <a href="safety.html"><h3><i class="fas fa-running"></i> For Safety</h3></a>
-    <a href="it.html"><h3><i class="fas fa-laptop-code"></i> Utilization IT</h3></a>
-  </div>
-  </div>
   <div id="movie">
     <h2><span>Short Movie</span></h2>
     <iframe id="inner-video" src="https://www.youtube.com/embed/hRzDRFGEEw4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
   <div id="links">
-  <h2 id="links-title">LINKS</h2>
-  <div class="links-inner">
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.tokuyama.ac.jp/english/">Tokuyama College of Technology.</a></p>
-    <p><i class="fab fa-2x fa-facebook-square"></i><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/%E5%BE%B3%E5%B1%B1%E9%AB%98%E5%B0%82%E5%9B%BD%E9%9A%9B%E4%BA%A4%E6%B5%81%E3%83%9A%E3%83%BC%E3%82%B8-1008019312619280/">International facebook</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.bikita.jp/class/index.php?cl=0f2b47">TCT Alumni association,<br> Takajo Kai</a></p>
-    <p><a target="_blank" rel="noopener noreferrer" href="https://www.tokuyama.ac.jp/examsp/index.html">Exam Imformation site</a></p>
-  </div>
+    <h2 id="links-title">SNS</h2>
+    <div class="links-inner">
+      <p><a target="_blank" rel="noopener noreferrer" href="https://twitter.com/TakajoDormitory"><i class="fab fa-twitter fa-lg"></i>Twitter</a></p>
+      <p><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/takajodormitory/"><i class="fab fa-instagram fa-lg"></i>Instagram</a></p>
+    </div>
+    <a class="twitter-timeline" data-width="500" data-height="700" href="https://twitter.com/TakajoDormitory?ref_src=twsrc%5Etfw">Tweets by TakajoDormitory</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
 
+  <!--footer-->
   <div class="footer">
-    <img src="../img/footer.png">
-    <a href="site.html"><p><span id="site">About this site</span></p></a>
-    <p id="copyright">© 2020 TakajoDormitory All Rights Reserved.</p>
+      <img src="../img/footer.png">
+      <a href="site.html"><p><span id="site">About this site</span></p></a>
+      <p id="copyright">© 2020-2021 TakajoDormitory All Rights Reserved.</p>
   </div>
+
 
   <script type="text/javascript" src="../script/jquery-3.5.1.min.js"></script> <!-- jquery -->
   <script src="../script/indexEN.js"></script> <!--JS取り込み-->
