@@ -184,9 +184,6 @@ a{
     left:0;
     width:100%;
     z-index: 2;
-    transition: 0.5s;
-}
-#header:hover{
     background-color: white;
 }
 /*見出し設定*/

@@ -215,18 +215,18 @@
 }
 
 #header h1,#header i{
-    color: #fff;
+    color: #FFF;
+    transition: all  1.0s ease;
 }
+
 #wrapper .btn-gnavi span{
+    transition: all  1.0s ease;
     background-color: #fff;
 }
 
 #header{
-    transition: all  0.3s ease;
+    transition: all  1.0s ease;
     background-color: rgba(0, 0, 0, 0);
-}
-#header:hover{
-    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* 以下スライダー用 */

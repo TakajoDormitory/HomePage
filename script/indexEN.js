@@ -25,14 +25,19 @@ pagetop.click(function () {
 });
 
 // header
-let header = $('#header');
+let header = $('#header h1,#header i');
+let nav=$('#wrapper .btn-gnavi span');
 let videoArea= $('#video-area');
 $(window).scroll(function () {
     if ($(this).scrollTop() > videoArea.height()-150) {
-        header.css({'background-color':'rgba(0, 0, 0, 0.75)','transition':'0.5s'});
+        header.css({'color':'#000'});
+        nav.css({'background-color':'#000'});
+        $('#header').css({'background-color':'#FFF'});
     }
     else {
-        header.css({'background-color':'rgba(0, 0, 0, 0)'});
+        header.css({'color':'#FFF'});
+        nav.css({'background-color':'#FFF'});
+        $('#header').css({'background-color':'rgba(0,0,0,0)'});
     }
 });
 });
