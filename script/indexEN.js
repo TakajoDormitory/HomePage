@@ -30,9 +30,9 @@ let nav=$('#wrapper .btn-gnavi span');
 let videoArea= $('#video-area');
 $(window).scroll(function () {
     if ($(this).scrollTop() > videoArea.height()-150) {
-        header.css({'color':'#000'});
-        nav.css({'background-color':'#000'});
-        $('#header').css({'background-color':'#FFF'});
+        header.css({'transition': 'all  1.0s ease','color':'#000'});
+        nav.css({'transition':'all  1.0s ease','background-color':'#000'});
+        $('#header').css({'transition': 'all  1.0s ease','background-color':'#FFF'});
     }
     else {
         header.css({'color':'#FFF'});

@@ -208,16 +208,13 @@
 
 #header h1,#header i{
     color: #FFF;
-    transition: all  1.0s ease;
 }
 
 #wrapper .btn-gnavi span{
-    transition: all  1.0s ease;
     background-color: #fff;
 }
 
 #header{
-    transition: all  1.0s ease;
     background-color: rgba(0, 0, 0, 0);
 }
 
