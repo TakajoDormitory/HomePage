@@ -1,10 +1,9 @@
 // 表示する画像の配列
 let imgList = [
 	"../img/OverView.jpg",
-	"../img/BBQ.jpg",
-	"../img/CherryBlossom.jpg",
+	"../img/EntranceCeremony.jpg",
+	"../img/Firework.jpg",
 	"../img/soccer.jpg",
-	"../img/GetTail.jpg"
 ];
 
 // 画像とナビの要素を自動で追加

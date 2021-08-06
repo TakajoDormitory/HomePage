@@ -1,6 +1,5 @@
 @charset "utf-8";
 .pair{
-    margin-top:30px;
     display: -webkit-flex;
     display: flex;
     -webkit-justify-content: center;
@@ -131,6 +130,7 @@
 
 
 #page_top{
+    z-index: 2;
     width: 80px;
     height: 80px;
     position: fixed;
@@ -167,38 +167,27 @@
 
 #video-area{
     z-index: -1;
-    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
-    height: 100vh;/*高さを全画面にあわせる*/
-}
-
-#video-origin{
-    position: fixed;
-    z-index: -1;/*最背面に設定*/
-    top: 0;
-    right:0;
-    left:0;
-    bottom:0;
-    overflow: hidden;
+    position: relative;
+    height: 50vh;
 }
 
 #video {
-    /*天地中央配置*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*縦横幅指定*/
-    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
-    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+        min-width: 100%;
     min-height: 100%;
-    min-width: 100%;
+    width: 100%;
 }
-
 #video-area h1{
-    font-size:80px;
+    z-index: 1;
+    font-size:50px;
+    font-weight: 400;
     width: 530px;
-    top: 60vh;
-    left:65vw;
+    top: 35vh;
+    left:35vw;
+    text-align: center;
     /*要素の配置*/
     position:absolute;
     /*要素を天地中央寄せ*/
@@ -222,6 +211,14 @@
 
 #wrapper .btn-gnavi span{
     background-color: #fff;
+}
+
+#header{
+    transition: all  0.3s ease;
+    background-color: rgba(0, 0, 0, 0);
+}
+#header:hover{
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 /* 以下スライダー用 */
@@ -349,4 +346,8 @@
     width:800px;
     height: 450px;
     border-radius: 10px;
+}
+
+#container{
+    margin-top:0px;
 }

@@ -12,6 +12,7 @@ a{
     color:#2997FF;
 }
 
+.middle{text-align: center;}
 
 #bar .search{
     margin-right: 40px;
@@ -28,6 +29,7 @@ a{
 }
 #bar .lang{
     padding:5px;
+    font-weight: 400;
     border:solid 1px white;
 }
 
@@ -70,8 +72,6 @@ a{
 .footer img{
     height:70px;
 }
-
-.middle{text-align: center;}
 
 .list{
     width: 350px;
@@ -199,17 +199,20 @@ a{
     user-select: none;
 }
 
-#header i{top: 40px;}
+#header i{top: 38px;}
 
 #header #title{
     top: 16px;
     left:180px;
+    font-weight: 400;
 }
 
 #header #lang{
     position: fixed;
     right: 100px;
+    top:24px;
     font-size: 21px;
+    font-weight: 400;
     width: auto;
 
 }

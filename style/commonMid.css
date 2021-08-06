@@ -12,7 +12,7 @@ a{
     color:#2997FF;
 }
 
-
+.middle{text-align: center;}
 
 #bar .search{
     margin-right: 40px;
@@ -152,6 +152,7 @@ a{
 }
 #bar .lang{
     padding:5px;
+    font-weight: 400;
     border:solid 1px white;
 }
 
@@ -204,16 +205,19 @@ a{
     user-select: none;
 }
 
-#header i{top: 40px;}
+#header i{top: 48px;}
 
 #header #title{
+    font-weight: 400;
     left:180px;
 }
 
 #header #lang{
     position: fixed;
     right: 100px;
+    top: 32px;
     font-size: 21px;
+    font-weight: 400;
     width: auto;
 
 }
