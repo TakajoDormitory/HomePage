@@ -1,8 +1,8 @@
 // 表示する画像の配列
 let imgList = [
 	"../img/OverView.jpg",
-	"../img/EntranceCeremony.jpg",
-	"../img/Firework.jpg",
+	"../img/EntranceCeremony.JPG",
+	"../img/Firework.JPG",
 	"../img/soccer.jpg",
 ];
 

@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="style/indexMin.css" type="text/css" media="screen and (min-width:0px) and (max-width:870px)"> <!--index用CSS-->
   <link rel="stylesheet" href="style/indexMid.css" type="text/css" media="screen and (min-width:870px) and (max-width:1150px)"> <!--index用CSS-->
   <link rel="stylesheet" href="style/index.css" type="text/css" media="screen and (min-width:1150px)"> <!--index用CSS-->
-  <link rel="stylesheet" href="../style/bootstrap.min.css"> <!--bootstrap css　読み込み-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
   <link rel="icon" href="img/icon.png" sizes="32x32" /> <!--サイトアイコン-->
   <link rel="icon" href="img/icon.png" sizes="192x192" /> <!--サイトアイコン-->
@@ -38,7 +37,9 @@
   </header>
   <div id="video-area">
     <h1>WELCOME TO TAKAJO</h1>
-    <video id="video" src="video/OverView.mp4" type="video/mp4" poster="img/OverViewSky.jpg" webkit-playsinline playsinline muted autoplay loop></video>
+    <video id="video" poster="img/OverViewSky.JPG" webkit-playsinline playsinline muted autoplay loop preload="auto">
+      <source src="video/OverView.mp4" type="video/mp4">
+    </video>
   </div>
   
   <div id="wrapper">
