@@ -1,6 +1,14 @@
-#map{
-    width: 100%;
+#map {
+  width: 100%;
 }
-#address{
-    margin-left:70%;
+
+@media screen and (min-width: 1270px) {
+  #address {
+    margin-left: 70%;
+  }
+}
+@media screen and (max-width: 1270px) {
+  #address {
+    text-align: center;
+  }
 }

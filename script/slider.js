@@ -1,17 +1,29 @@
-// 表示する画像の配列
-let imgList = [
-	"img/OverView.jpg",
-	"img/EntranceCeremony.JPG",
-	"img/Firework.JPG",
-	"img/soccer.jpg",
-];
+// 表示する画像の配列を作成
+let htmlName = location.href.split('/');
+if (htmlName[htmlName.length - 2] == 'en') {
+	var imgList = [
+		"../img/OverView.jpg",
+		"../img/EntranceCeremony.JPG",
+		"../img/Firework.JPG",
+		"../img/soccer.jpg",
+	];
+	console.log("good");
+}
+else {
+	var imgList = [
+		"img/OverView.jpg",
+		"img/EntranceCeremony.JPG",
+		"img/Firework.JPG",
+		"img/soccer.jpg",
+	];
+}
 
 // 画像とナビの要素を自動で追加
-for(let i = 0; i < imgList.length; i++) {
+for (let i = 0; i < imgList.length; i++) {
 	// li要素を取得
 	let slide = document.createElement("li");
 	// li要素の中に画像タグを埋め込む
-	if(window.innerWidth<1450) slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
+	if (window.innerWidth < 1450) slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
 	else slide.innerHTML = "<img width='800px' height='450px' src='" + imgList[i] + "'>";
 	// li要素をクラス名「slider-inner」の子要素として追加
 	document.getElementsByClassName("slider-inner")[0].appendChild(slide);
@@ -53,20 +65,20 @@ function sliderSlide(val) {
 	imageSlide[nowIndex].classList.add("show");
 	dotNavigation[nowIndex].classList.add("current");
 	// アニメーションが終わるタイミングでisChangingのステータスをfalseに
-	slideTimer = setTimeout(function(){
+	slideTimer = setTimeout(function () {
 		isChanging = false;
 	}, 600);
 }
 
 //スライド自動送りを開始する関数
-function startInterval(){
-	Interval=setInterval(function(){
-	let index = nowIndex + 1;
-	if(index > length){
-	  index = 0;
-	}
-	sliderSlide(index);
-},4000);
+function startInterval() {
+	Interval = setInterval(function () {
+		let index = nowIndex + 1;
+		if (index > length) {
+			index = 0;
+		}
+		sliderSlide(index);
+	}, 4000);
 }
 
 //スライド自動送りを開始
@@ -74,32 +86,32 @@ startInterval();
 
 //画像及びナビにホバーで自動送り停止
 $(".slider").hover(
-	function(){clearInterval(Interval);},
-	function(){startInterval();}
+	function () { clearInterval(Interval); },
+	function () { startInterval(); }
 );
 
 // ドットナビをクリックした時のイベントを作成
-for(let i = 0; i < dotNavigation.length; i++) {
+for (let i = 0; i < dotNavigation.length; i++) {
 	// データ属性のインデックス番号を元にスライドを行う
-	dotNavigation[i].addEventListener("click", function(){
+	dotNavigation[i].addEventListener("click", function () {
 		let index = Number(this.getAttribute("data-nav-index"));
 		sliderSlide(index);
 	}, false);
 }
 
 // 左矢印のナビをクリックした時のイベント
-document.getElementById("arrow-prev").addEventListener("click", function(){
+document.getElementById("arrow-prev").addEventListener("click", function () {
 	let index = nowIndex - 1;
-	if(index < 0){
-	  index = length;
+	if (index < 0) {
+		index = length;
 	}
 	sliderSlide(index);
 }, false);
 // 右矢印のナビをクリックした時のイベント
-document.getElementById("arrow-next").addEventListener("click", function(){
+document.getElementById("arrow-next").addEventListener("click", function () {
 	let index = nowIndex + 1;
-	if(index > length){
-	  index = 0;
+	if (index > length) {
+		index = 0;
 	}
 	sliderSlide(index);
 }, false);
