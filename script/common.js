@@ -38,13 +38,16 @@ $(function () {
       }
       // index.htmlではないもしくは
       // index.htmlかつビデオより下なら背景色を変更
-      if (htmlName[htmlName.length - 1] != 'index.html' || (htmlName[htmlName.length - 1] == 'index.html' && mouseY > videoArea.height() - 150)) {
+      if (htmlName[htmlName.length - 1] != 'index.html' || (htmlName[htmlName.length - 1] == 'index.html' && mouseY > videoArea.height())) {
         nav.css({ "background-color": "#000" });
+        console.log(mouseY);
+        console.log(videoArea.height());
       }
       rightVal = -300;
       $(this).removeClass("open");
       // スクロール制限を解除
       $('body').css({ 'overflow': 'scroll' });
+      $('html').css({ 'overflow': 'scroll' });
       $('#wrapper').css({ 'overflow': 'scroll' });
     }
     // 開いた状態であれば閉じる
@@ -56,6 +59,7 @@ $(function () {
       nav.css({ "background-color": "#FFF" });
       // スクロール制限を設定
       $('body').css({ 'overflow': 'hidden' });
+      $('html').css({ 'overflow': 'hidden' });
       $('#wrapper').css({ 'overflow': 'scroll' });
     }
 
