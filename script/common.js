@@ -23,7 +23,7 @@ $(function () {
   $('.btn-gnavi').add('.fa-search').on("click", function () {
     // ハンバーガーメニューのコンテンツの位置を格納する変数
     let rightVal = 0;
-    // 既に開いた状態であれば閉じる
+    // 開いた状態であれば閉じる
     if ($(this).hasClass("open")) {
       // アニメーション速度を遅くする
       nav.css({ transition: "all  1.0s ease" });
@@ -33,12 +33,21 @@ $(function () {
       }
       rightVal = -300;
       $(this).removeClass("open");
-    } else {
+      // スクロール制限を解除
+      $('body').css({ 'overflow': 'scroll' });
+      $('#wrapper').css({ 'overflow': 'scroll' });
+    }
+    // 開いた状態であれば閉じる
+    else {
       $(this).addClass("open");
       // アニメーション速度を矢印用に設定
       nav.css({ transition: "all  0.3s ease" });
       // 背景色を白色にする
       nav.css({ "background-color": "#FFF" });
+      // スクロール制限を設定
+      $('body').css({ 'overflow': 'hidden' });
+      $('#wrapper').css({ 'overflow': 'scroll' });
+      console.log("test");
     }
 
     $("#bar").stop().animate(
