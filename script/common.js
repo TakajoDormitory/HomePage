@@ -19,6 +19,9 @@ let videoArea;
 if (htmlName[htmlName.length - 1] == 'index.html') {
   videoArea = $("#video-area");
 }
+// マウスのY座標を格納する変数
+let mouseY = 0;
+
 $(function () {
   $('.btn-gnavi').add('.fa-search').on("click", function () {
     // ハンバーガーメニューのコンテンツの位置を格納する変数
@@ -27,8 +30,15 @@ $(function () {
     if ($(this).hasClass("open")) {
       // アニメーション速度を遅くする
       nav.css({ transition: "all  1.0s ease" });
-      // index.htmlなら背景色を変更
-      if (htmlName[htmlName.length - 1] != 'index.html' || (htmlName[htmlName.length - 1] == 'index.html' && $(this).scrollTop() > videoArea.height() - 150)) {
+      // index.htmlならマウスのY座標を取得
+      if (htmlName[htmlName.length - 1] == 'index.html') {
+        document.addEventListener('mousemove', function (e) {
+          mouseY = e.pageY;
+        });
+      }
+      // index.htmlではないもしくは
+      // index.htmlかつビデオより下なら背景色を変更
+      if (htmlName[htmlName.length - 1] != 'index.html' || (htmlName[htmlName.length - 1] == 'index.html' && mouseY > videoArea.height() - 150)) {
         nav.css({ "background-color": "#000" });
       }
       rightVal = -300;
@@ -47,7 +57,6 @@ $(function () {
       // スクロール制限を設定
       $('body').css({ 'overflow': 'hidden' });
       $('#wrapper').css({ 'overflow': 'scroll' });
-      console.log("test");
     }
 
     $("#bar").stop().animate(
