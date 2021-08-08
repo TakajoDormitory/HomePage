@@ -27,7 +27,6 @@ $(function () {
     // ヘッダーの要素の色の変更
     let header = $('#header h1,#header i');
     let nav = $('#wrapper .btn-gnavi span');
-    let videoArea = $('#video-area');
     $(window).scroll(function () {
         // ビデオより下にスクロールしたとき色を黒
         if ($(this).scrollTop() > videoArea.height() - 150) {

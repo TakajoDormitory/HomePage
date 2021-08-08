@@ -14,11 +14,8 @@ for (let i = 0; i < metaLength; i++) {
 let nav = $("#wrapper .btn-gnavi span");
 // ファイル名を取得
 let htmlName = location.href.split('/');
-let videoArea;
-// index.htmlならvideoの範囲を抽出
-if (htmlName[htmlName.length - 1] == 'index.html') {
-  videoArea = $("#video-area");
-}
+// videoの範囲を抽出
+let videoArea = $('#video-area');
 // マウスのY座標を格納する変数
 let mouseY = 0;
 
@@ -28,6 +25,8 @@ $(function () {
     let rightVal = 0;
     // 開いた状態であれば閉じる
     if ($(this).hasClass("open")) {
+      // スクロール制限を解除
+      $('html').css({ 'overflow': 'visible' });
       // アニメーション速度を遅くする
       nav.css({ transition: "all  1.0s ease" });
       // index.htmlならマウスのY座標を取得
@@ -45,22 +44,17 @@ $(function () {
       }
       rightVal = -300;
       $(this).removeClass("open");
-      // スクロール制限を解除
-      $('body').css({ 'overflow': 'scroll' });
-      $('html').css({ 'overflow': 'scroll' });
-      $('#wrapper').css({ 'overflow': 'scroll' });
     }
-    // 開いた状態であれば閉じる
+    // 閉じた状態であれば開く
     else {
       $(this).addClass("open");
+      // スクロール制限を設定
+      $('html').css({ 'overflow': 'hidden' });
+      $('#wrapper').css({ 'overflow-y': 'visible' });
       // アニメーション速度を矢印用に設定
       nav.css({ transition: "all  0.3s ease" });
       // 背景色を白色にする
       nav.css({ "background-color": "#FFF" });
-      // スクロール制限を設定
-      $('body').css({ 'overflow': 'hidden' });
-      $('html').css({ 'overflow': 'hidden' });
-      $('#wrapper').css({ 'overflow': 'scroll' });
     }
 
     $("#bar").stop().animate(
