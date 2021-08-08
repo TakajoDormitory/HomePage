@@ -1,7 +1,8 @@
 // 表示する画像の配列を作成
-let htmlName = location.href.split('/');
+let imgList;
+// htmlNameはcommon.jsで定義済み
 if (htmlName[htmlName.length - 2] == 'en') {
-	var imgList = [
+	imgList = [
 		"../img/OverView.jpg",
 		"../img/EntranceCeremony.JPG",
 		"../img/Firework.JPG",
@@ -10,7 +11,7 @@ if (htmlName[htmlName.length - 2] == 'en') {
 	console.log("good");
 }
 else {
-	var imgList = [
+	imgList = [
 		"img/OverView.jpg",
 		"img/EntranceCeremony.JPG",
 		"img/Firework.JPG",
