@@ -1,3 +1,15 @@
+/* スクロールバーを非表示 */
+html {
+  /* IE, Edge 対応 */
+  -ms-overflow-style: none;
+  /* Firefox 対応 */
+  scrollbar-width: none;
+}
+/* Chrome, Safari 対応 */
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +17,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: auto;
 }
 li {
   list-style: none;
@@ -195,9 +207,9 @@ a {
 }
 
 @media screen and (min-width: 1270px) {
-    #header{
-        padding: 40px 100%;
-    }
+  #header {
+    padding: 40px 100%;
+  }
 }
 
 /*見出し設定*/
@@ -217,23 +229,23 @@ a {
 }
 
 #header h1 {
-    top: 25px;
+  top: 25px;
 }
 
-@media screen and (min-width:0px) and (max-width:870px){
-    #header i {
-        top: 40px;
-      }
+@media screen and (min-width: 0px) and (max-width: 870px) {
+  #header i {
+    top: 40px;
+  }
 }
-@media screen and (min-width:870px) and (max-width:1270px){
-    #header i {
-        top: 48px;
-      }
+@media screen and (min-width: 870px) and (max-width: 1270px) {
+  #header i {
+    top: 48px;
+  }
 }
 @media screen and (min-width: 1270px) {
-    #header i {
-        top: 38px;
-      }   
+  #header i {
+    top: 38px;
+  }
 }
 
 #header #title {
@@ -242,16 +254,15 @@ a {
 }
 
 @media screen and (min-width: 1270px) {
-    #header #title {
-        top: 16px;
-    }
+  #header #title {
+    top: 16px;
+  }
 }
-@media screen and (min-width: 0px) and (max-width:870px){
-    #header #title {
-        left: 150px;
-    }
+@media screen and (min-width: 0px) and (max-width: 870px) {
+  #header #title {
+    left: 150px;
+  }
 }
-
 
 #header #lang {
   position: fixed;
@@ -261,21 +272,21 @@ a {
   width: auto;
 }
 
-@media screen and (max-width:870px) {
-    #header #lang {
-        display: none;
-    }
+@media screen and (max-width: 870px) {
+  #header #lang {
+    display: none;
+  }
 }
 
-@media screen and (min-width:870px) and (max-width:1270px) {
-    #header #lang {
-        top: 32px;
-    }
+@media screen and (min-width: 870px) and (max-width: 1270px) {
+  #header #lang {
+    top: 32px;
+  }
 }
 @media screen and (min-width: 1270px) {
-    #header #lang {
-        top: 24px;
-    }
+  #header #lang {
+    top: 24px;
+  }
 }
 
 #header .fa-map-marker-alt {
@@ -285,10 +296,10 @@ a {
   width: auto;
 }
 
-@media screen and (max-width:870px) {
-    #header .fa-map-marker-alt {
-        display: none;
-    }
+@media screen and (max-width: 870px) {
+  #header .fa-map-marker-alt {
+    display: none;
+  }
 }
 
 #header .fa-search {
@@ -298,10 +309,10 @@ a {
   width: auto;
 }
 
-@media screen and (max-width:870px) {
-    #header .fa-search {
-        display: none;
-    }
+@media screen and (max-width: 870px) {
+  #header .fa-search {
+    display: none;
+  }
 }
 
 #container {
