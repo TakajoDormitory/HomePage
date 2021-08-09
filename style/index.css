@@ -7,7 +7,7 @@
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
-  } 
+  }
 }
 
 #department {
@@ -33,13 +33,13 @@
   color: white;
 }
 @media screen and (max-width: 870px) {
-  #department h1{
+  #department h1 {
     font-size: 1.2em;
     margin: auto;
   }
 }
 @media screen and (min-width: 870px) {
-  #department h1{
+  #department h1 {
     font-size: 22px;
   }
 }
@@ -79,7 +79,7 @@
   overflow: auto;
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #notice-inner {
     margin: auto;
     width: 80%;
@@ -87,13 +87,13 @@
   }
 }
 
-@media screen and (min-width:870px) and (max-width:1150px){
+@media screen and (min-width: 870px) and (max-width: 1150px) {
   #notice-inner {
     width: 400px;
   }
 }
 
-@media screen and (min-width:1150px){
+@media screen and (min-width: 1150px) {
   #notice-inner {
     width: 700px;
   }
@@ -105,7 +105,7 @@
   color: #a7212f;
 }
 
-@media screen and (max-width:1150px){
+@media screen and (max-width: 1150px) {
   #notice-inner dt {
     font-size: 1.2em;
   }
@@ -116,7 +116,7 @@
   word-wrap: break-word;
 }
 
-@media screen and (max-width:1150px){
+@media screen and (max-width: 1150px) {
   #notice-inner dd {
     font-size: 1em;
   }
@@ -145,12 +145,12 @@
   margin: 100px 0 50px 0;
   text-align: center;
 }
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #links {
     margin: auto;
     width: 100%;
     margin-bottom: 100px;
-  }  
+  }
 }
 .links-inner {
   padding-bottom: 50px;
@@ -166,7 +166,7 @@
   margin-top: 40px;
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #links-title {
     font-size: 1.5em;
   }
@@ -234,7 +234,7 @@
   position: relative; /*h1の中央寄せ配置の起点とするためのrelative*/
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #video-area {
     width: 100%;
     height: 50vh;
@@ -242,13 +242,13 @@
   }
 }
 
-@media screen and (min-width:870px) and (max-width:1150px){
+@media screen and (min-width: 870px) and (max-width: 1150px) {
   #video-area {
     height: 50vh;
   }
 }
 
-@media screen and (min-width:1150px){
+@media screen and (min-width: 1150px) {
   #video-area {
     height: 100vh;
   }
@@ -262,13 +262,13 @@
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #video {
     height: 50vh;
   }
 }
 
-@media screen and (min-width:870px) and (max-width:1150px){
+@media screen and (min-width: 870px) and (max-width: 1150px) {
   #video {
     min-width: 100%;
     min-height: 100%;
@@ -276,7 +276,7 @@
   }
 }
 
-@media screen and (min-width:1150px){
+@media screen and (min-width: 1150px) {
   #video {
     width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
     height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
@@ -297,7 +297,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #video-area h1 {
     padding-left: 10px;
     font-size: 40px;
@@ -307,7 +307,7 @@
   }
 }
 
-@media screen and (min-width:870px) and (max-width:1150px){
+@media screen and (min-width: 870px) and (max-width: 1150px) {
   #video-area h1 {
     font-size: 50px;
     width: 530px;
@@ -317,7 +317,7 @@
   }
 }
 
-@media screen and (min-width:1150px){ 
+@media screen and (min-width: 1150px) {
   #video-area h1 {
     top: 60vh;
     left: 70vw;
@@ -333,7 +333,7 @@
   background: #fff;
 }
 
-@media screen and (min-width:870px){
+@media screen and (min-width: 870px) {
   #container {
     padding: 100px 0 0px 0;
   }
@@ -353,20 +353,19 @@
 }
 
 /* 以下スライダー用 */
-.slider {
+#slider {
   margin: auto;
   position: relative;
   width: 800px;
-
 }
-@media screen and (max-width:870px){
-  .slider {
+@media screen and (max-width: 870px) {
+  #slider {
     width: 100%;
     margin-bottom: 55vw;
   }
 }
-@media screen and (min-width:870px) {
-  .slider {
+@media screen and (min-width: 870px) {
+  #slider {
     height: 450px;
   }
 }
@@ -376,7 +375,7 @@
   text-align: center;
 }
 
-@media screen and (max-width:870px) {
+@media screen and (max-width: 870px) {
   #slider-title {
     font-size: 1.5em;
   }
@@ -388,14 +387,14 @@
   width: 800px;
 }
 
-@media screen and (max-width:870px) {
+@media screen and (max-width: 870px) {
   #slider-content {
     margin-top: 70vw;
     width: 80vw;
   }
 }
 
-.slider .slider-inner {
+#slider .slider-inner {
   position: relative;
   top: 0;
   left: 0;
@@ -403,7 +402,7 @@
   height: 100%;
   padding-left: 0;
 }
-.slider .slider-inner li {
+#slider .slider-inner li {
   position: absolute;
   top: 0;
   left: 0;
@@ -416,13 +415,13 @@
   pointer-events: none;
 }
 
-@media screen and (min-width:870px) {
-  .slider .slider-inner img {
+@media screen and (min-width: 870px) {
+  #slider .slider-inner img {
     border-radius: 4px;
-  } 
+  }
 }
 
-.slider .slider-inner li.show {
+#slider .slider-inner li.show {
   opacity: 1;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   z-index: 1;
@@ -430,20 +429,20 @@
   width: auto;
 }
 
-.slider .nav {
+#slider .nav {
   padding-left: 0;
   margin-top: 10px;
   text-align: center;
   font-size: 0;
 }
 
-@media screen and (max-width:870px) {
-  .slider .nav {
+@media screen and (max-width: 870px) {
+  #slider .nav {
     display: none;
   }
 }
 
-.slider .nav li {
+#slider .nav li {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -455,15 +454,15 @@
   transition: background 400ms;
 }
 
-.slider .nav li:hover {
+#slider .nav li:hover {
   background: #a7212f;
 }
 
-.slider .nav li.current {
+#slider .nav li.current {
   background: #a7212f;
 }
 
-.slider .arrow {
+#slider .arrow {
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -474,8 +473,8 @@
   transition: opacity 400ms;
 }
 
-@media screen and (max-width:870px) {
-  .slider .arrow {
+@media screen and (max-width: 870px) {
+  #slider .arrow {
     font-size: 20px;
     width: 20px;
     height: 20px;
@@ -484,42 +483,42 @@
     line-height: 20px;
   }
 }
-@media screen and (min-width:870px) {
-  .slider .arrow {
+@media screen and (min-width: 870px) {
+  #slider .arrow {
     font-size: 25px;
     line-height: 75px;
   }
 }
 
-.slider .arrow:hover {
+#slider .arrow:hover {
   opacity: 0.7;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
 }
 
-.slider .arrow#arrow-prev {
+#slider .arrow#arrow-prev {
   -webkit-transform: translate(-100%, -50%);
   transform: translate(-100%, -50%);
 }
 
-.slider .arrow#arrow-next {
+#slider .arrow#arrow-next {
   -webkit-transform: translate(100%, -50%);
   transform: translate(100%, -50%);
 }
 
-@media screen and (max-width:870px) {
-  .slider .arrow#arrow-prev {
+@media screen and (max-width: 870px) {
+  #slider .arrow#arrow-prev {
     left: 30px;
   }
-  .slider .arrow#arrow-next {
+  #slider .arrow#arrow-next {
     right: 30px;
   }
 }
 
-@media screen and (min-width:870px) {
-  .slider .arrow#arrow-prev {
+@media screen and (min-width: 870px) {
+  #slider .arrow#arrow-prev {
     left: 0;
   }
-  .slider .arrow#arrow-next {
+  #slider .arrow#arrow-next {
     right: 0;
   }
 }
@@ -536,21 +535,21 @@
 #movie span {
   border-bottom: solid 2px #d59649;
 }
-@media screen and (max-width:870px){
+@media screen and (max-width: 870px) {
   #movie #inner-video {
     width: 100%;
     height: 55vw;
   }
 }
-@media screen and (min-width:870px) and (max-width:1150px){
+@media screen and (min-width: 870px) and (max-width: 1150px) {
   #movie #inner-video {
     width: 800px;
     height: 450px;
     border-radius: 10px;
-  }  
+  }
 }
 
-@media screen and (min-width:1150px){
+@media screen and (min-width: 1150px) {
   #movie #inner-video {
     width: 1066px;
     height: 599.625px;

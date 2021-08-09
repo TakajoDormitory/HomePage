@@ -8,7 +8,6 @@ if (htmlName[htmlName.length - 2] == 'en') {
 		"../img/Firework.JPG",
 		"../img/soccer.jpg",
 	];
-	console.log("good");
 }
 else {
 	imgList = [
@@ -86,7 +85,7 @@ function startInterval() {
 startInterval();
 
 //画像及びナビにホバーで自動送り停止
-$(".slider").hover(
+$("#slider").hover(
 	function () { clearInterval(Interval); },
 	function () { startInterval(); }
 );
@@ -115,4 +114,38 @@ document.getElementById("arrow-next").addEventListener("click", function () {
 		index = 0;
 	}
 	sliderSlide(index);
+}, false);
+
+
+// スワイプ用
+let direction, position;
+document.getElementsById("slider").addEventListener("touchstart", function (e) {
+	position = e.touches[0].pageX;
+	direction = ''; //一度リセットする
+}, false);
+
+document.getElementsById("slider").addEventListener("touchmove", function (e) {
+	//スワイプの方向（left／right）を取得
+	if (position - e.changedTouches[0].pageX > 30) {
+		direction = 'left'; //左と検知
+	} else if (position - e.changedTouches[0].pageX < -30) {
+		direction = 'right'; //右と検知
+	}
+	console.log(direction);
+}, false);
+
+document.getElementsById("slider").addEventListener("touchend", function (e) {
+	if (direction == 'right') {
+		let index = nowIndex--;
+		if (index < 0) {
+			index = length;
+		}
+		sliderSlide(index);
+	} else if (direction == 'left') {
+		let index = nowIndex++;
+		if (index > length) {
+			index = 0;
+		}
+		sliderSlide(index);
+	}
 }, false);
