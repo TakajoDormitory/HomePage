@@ -27,6 +27,107 @@ a {
   color: #2997ff;
 }
 
+h4 {
+  font-size: 24px;
+}
+#container h4 {
+  margin: 15px auto;
+  border-bottom: solid 3px black;
+  display: inline-block;
+}
+#container h5 {
+  margin: 10px auto;
+  font-size: 20px;
+}
+@media screen and (max-width: 870px) {
+  #container h4,
+  #container h5 {
+    margin-left: 30px;
+  }
+  #container .content {
+    width: 90vw;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 870px) {
+  #container h4,
+  #container h5 {
+    margin-left: 5vw;
+  }
+  #container .content {
+    width: 80vw;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 870px) {
+  .pair-left,
+  .pair-right {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .pair-left img,
+  .pair-right img {
+    width: 40vw;
+  }
+  .pair-left .content {
+    width: 40vw;
+    margin-left: 100px;
+  }
+  .pair-right .content {
+    width: 40vw;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .pair-left img,
+  .pair-right img {
+    width: 100%;
+  }
+}
+/* container内の表を装飾 */
+#container table {
+  border: solid 1px #ccc;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+@media screen and (max-width: 870px) {
+  #container table {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 870px) {
+  #container table {
+    width: 50%;
+  }
+}
+#container table th {
+  padding: 10px;
+}
+#container table td {
+  padding: 3px 10px;
+}
+
+#container table th,
+#container table td {
+  border: solid 1px #ccc;
+}
+
+#container table tr {
+  transition: 0.3s;
+}
+#container table tr:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+#container table tr:hover {
+  background-color: #dcdcdc;
+}
+
 .middle {
   text-align: center;
 }
@@ -316,5 +417,5 @@ a {
 }
 
 #container {
-  margin-top: 100px;
+  margin: 100px 0;
 }
