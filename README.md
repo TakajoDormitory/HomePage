@@ -9,7 +9,7 @@
 
 ## 開発用サイトについて
 
-[本サイト](https://takajodormitory.github.io/HomePage)は、[高城寮のホームページ](https://www.tokuyama.ac.jp/dormitory/)の開発用のサイトです。  
+[本サイト](https://takajodormitory.github.io/HomePage/index.html)は、[高城寮のホームページ](https://www.tokuyama.ac.jp/dormitory/)の開発用のサイトです。  
 このリポジトリでサイトを開発し、GitHub Pages を使って開発中のサイトを公開します。
 
 ## バグ、問題発見
