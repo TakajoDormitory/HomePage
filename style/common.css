@@ -32,22 +32,12 @@ h4 {
 }
 #container h4 {
   margin: 15px auto;
-  border-bottom: solid 3px black;
+  border-bottom: solid 3px #d59649;
   display: inline-block;
 }
 #container h5 {
   margin: 10px auto;
   font-size: 20px;
-}
-@media screen and (max-width: 870px) {
-  #container h4,
-  #container h5 {
-    margin-left: 30px;
-  }
-  #container .content {
-    width: 90vw;
-    margin: auto;
-  }
 }
 @media screen and (min-width: 870px) {
   #container h4,
@@ -58,8 +48,6 @@ h4 {
     width: 80vw;
     margin: auto;
   }
-}
-@media screen and (min-width: 870px) {
   .pair-left,
   .pair-right {
     display: -webkit-flex;
@@ -68,24 +56,64 @@ h4 {
     justify-content: center;
     -webkit-align-items: center;
     align-items: center;
+    margin-bottom: 50px;
   }
-  .pair-left img,
-  .pair-right img {
-    width: 40vw;
+  .pair-left .left-content {
+    width: 50vw;
+    margin-left: 5vw;
   }
-  .pair-left .content {
-    width: 40vw;
-    margin-left: 100px;
+  .pair-right .right-content {
+    width: 50vw;
+    margin-left: 5vw;
   }
-  .pair-right .content {
-    width: 40vw;
-    margin-right: 100px;
+  .pair-left h4,
+  .pair-right h4 {
+    margin: 0;
   }
 }
 @media screen and (max-width: 870px) {
+  #container h4,
+  #container h5 {
+    margin-left: 30px;
+  }
+  #container .content {
+    width: 90vw;
+    margin: auto;
+  }
+  .pair-left,
+  .pair-right {
+    margin-bottom: 50px;
+  }
   .pair-left img,
   .pair-right img {
     width: 100%;
+  }
+  .pair-left .left-content,
+  .pair-right .right-content {
+    width: 90vw;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 870px) and (max-width: 1270px) {
+  .pair-left img,
+  .pair-right img {
+    width: 40vw;
+  }
+  .pair-left .left-content {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1270px) {
+  /* 縦長の写真を調節 */
+  .pair-left img:not(.Vertically-img),
+  .pair-right img:not(.Vertically-img) {
+    width: 40vw;
+  }
+  .Vertically-img {
+    height: 600px;
+  }
+  .pair-left .left-content {
+    margin-right: 6vw;
   }
 }
 /* container内の表を装飾 */
@@ -113,19 +141,11 @@ h4 {
   padding: 3px 10px;
 }
 
-#container table th,
-#container table td {
-  border: solid 1px #ccc;
-}
-
 #container table tr {
   transition: 0.3s;
 }
 #container table tr:nth-child(odd) {
   background-color: #f5f5f5;
-}
-#container table tr:hover {
-  background-color: #dcdcdc;
 }
 
 .middle {
