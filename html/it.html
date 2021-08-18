@@ -36,6 +36,32 @@
   <!--タイトル-->
   <meta property="og:locale" content="ja_JP" />
   <!--言語設定-->
+  <style>
+    .TextTyping span {
+      display: none;
+    }
+
+    @keyframes typinganime {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .message {
+      margin-left: 10vw;
+      margin-top: 200px;
+      font-size: 54px;
+      line-height: 1.92;
+    }
+
+    .message p {
+      margin: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -77,6 +103,18 @@
   </div>
   <!--container-->
   <div id="container">
+    <div class="message">
+      <p style="margin-bottom: 100px">
+        <span class="TextTyping">コードを書くこと。</span><br>
+        <span class="TextTyping">サーバを建てること。</span><br>
+        <span class="TextTyping">少しの興味から無限の可能性へ。</span>
+      </p>
+    </div>
+    <div class="content">
+      <p class="TextTyping">高城寮では、積極的に情報技術の活用に取り組んでいます。</p>
+      <p class="TextTyping">また、ITに興味のある寮生を全面的にバックアップしています。</p>
+      <a href="https://github.com/TakajoDormitory" target="_blank">高城寮GitHub</a>
+    </div>
   </div>
   <!--footer-->
   <div class="footer">
@@ -88,6 +126,7 @@
   </div>
 
   <script type="text/javascript" src="../script/jquery-3.5.1.min.js"></script> <!-- jquery -->
+  <script src="../script/typing.js"></script>
   <script src="../script/common.js"></script>
   <!--JS取り込み-->
 </body>
