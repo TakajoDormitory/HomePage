@@ -51,15 +51,31 @@
       }
     }
 
-    .message {
-      margin-left: 10vw;
-      margin-top: 200px;
-      font-size: 54px;
-      line-height: 1.92;
+    @media screen and (max-width: 870px) {
+      .message {
+        word-break: break-word;
+        margin-left: 2vw;
+        margin-top: 100px;
+        font-size: 36px;
+        line-height: 1.92;
+      }
+    }
+
+    @media screen and (min-width: 870px) {
+      .message {
+        margin-left: 10vw;
+        margin-top: 200px;
+        font-size: 54px;
+        line-height: 1.92;
+      }
     }
 
     .message p {
       margin: 0;
+    }
+
+    .content {
+      font-size: 21px;
     }
   </style>
 </head>
