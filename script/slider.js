@@ -128,7 +128,7 @@ $(document).ready(function () {
 	// 指が離れたらendSwipeを実行
 	$("#slider").on("touchend", endSwipe);
 
-	let, moveX, posiX;
+	let moveX, posiX;
 
 
 	// 指が触れた時の処理
