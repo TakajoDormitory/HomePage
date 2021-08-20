@@ -1,6 +1,14 @@
+// htmlNameはcommon.jsで定義済み
+if (htmlName[htmlName.length - 2] == 'en') {
+    jsonPath = '../json/notice.json';
+}
+else {
+    jsonPath = 'json/notice.json';
+}
+
 $(function () {
     // notice.jsonからお知らせ情報を取得
-    $.getJSON("json/notice.json", function (data) {
+    $.getJSON(jsonPath, function (data) {
         for (let i = data.length - 1; i >= 0; i--) {
             $("#list").append($('<li><dl><dt>' + data[i].date + '</dt><dd><a href="html/notice/' + data[i].href + '.html">' + data[i].title + '</a></dd></dl></li>'));
         }
