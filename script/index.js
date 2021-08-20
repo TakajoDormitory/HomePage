@@ -162,13 +162,13 @@ $(function () {
 
     // スワイプ
     // 指が触れたらstartSwipeを実行
-    $("#slider").on("touchstart", startSwipe);
+    $("#slider img").on("touchstart", startSwipe);
 
     // 指が動いたらSwipingを実行
-    $("#slider").on("touchmove", Swiping);
+    $("#slider img").on("touchmove", Swiping);
 
     // 指が離れたらendSwipeを実行
-    $("#slider").on("touchend", endSwipe);
+    $("#slider img").on("touchend", endSwipe);
 
 
     var moveX, posiX;
