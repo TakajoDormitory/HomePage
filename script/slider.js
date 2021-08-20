@@ -117,35 +117,65 @@ document.getElementById("arrow-next").addEventListener("click", function () {
 }, false);
 
 
-// スワイプ用
-let direction, position;
-document.getElementsById("slider").addEventListener("touchstart", function (e) {
-	position = e.touches[0].pageX;
-	direction = ''; //一度リセットする
-}, false);
+// スワイプ
+$(document).ready(function () {
+	// 指が触れたらstartSwipeを実行
+	$("#slider").on("touchstart", startSwipe);
 
-document.getElementsById("slider").addEventListener("touchmove", function (e) {
-	//スワイプの方向（left／right）を取得
-	if (position - e.changedTouches[0].pageX > 30) {
-		direction = 'left'; //左と検知
-	} else if (position - e.changedTouches[0].pageX < -30) {
-		direction = 'right'; //右と検知
-	}
-	console.log(direction);
-}, false);
+	// 指が動いたらSwipingを実行
+	$("#slider").on("touchmove", Swiping);
 
-document.getElementsById("slider").addEventListener("touchend", function (e) {
-	if (direction == 'right') {
-		let index = nowIndex--;
-		if (index < 0) {
-			index = length;
-		}
-		sliderSlide(index);
-	} else if (direction == 'left') {
-		let index = nowIndex++;
-		if (index > length) {
-			index = 0;
-		}
-		sliderSlide(index);
+	// 指が離れたらendSwipeを実行
+	$("#slider").on("touchend", endSwipe);
+
+	let, moveX, posiX;
+
+
+	// 指が触れた時の処理
+	function startSwipe(event) {
+		// 現在の座標を取得
+		posiX = getX(event);
+
+		// 結果の変数を初期化
+		moveX = '';
 	}
-}, false);
+
+	// 指が動いている時の処理
+	function Swiping(event) {
+		// 右から左へ70px以上スワイプ
+		if (posiX - getX(event) > 70) {
+			moveX = "left";
+		}
+		// 左から右へ70px以上スワイプ
+		else if (posiX - getX(event) < -70) {
+			moveX = "right";
+		}
+	}
+
+	// 指が離れたときの処理
+	function endSwipe(event) {
+		// 左へ移動していた場合
+		if (moveX == "left") {
+			let index = nowIndex + 1;
+			if (index > length) {
+				index = 0;
+			}
+			sliderSlide(index);
+		}
+		// 右へ移動した場合
+		else if (moveX == "right") {
+			let index = nowIndex - 1;
+			if (index < 0) {
+				index = length;
+			}
+			sliderSlide(index);
+		}
+
+	}
+
+	//横方向の座標を取得
+	function getX(event) {
+		return (event.originalEvent.touches[0].pageX);
+	}
+
+});
