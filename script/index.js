@@ -155,9 +155,17 @@ $(function () {
     }
 
     // 左矢印のナビをクリックした時のイベント
-    $("#arrow-prev").on("click", slideLeft);
+    $("#arrow-prev").on("click", function () {
+        clearInterval(Interval);
+        slideLeft();
+        startInterval();
+    });
     // 右矢印のナビをクリックした時のイベント
-    $("#arrow-next").on("click", slideRight);
+    $("#arrow-next").on("click", function () {
+        clearInterval(Interval);
+        slideRight();
+        startInterval();
+    });
 
 
     // スワイプ
@@ -197,11 +205,15 @@ $(function () {
     function endSwipe(event) {
         // 左へ移動していた場合
         if (moveX == "left") {
+            clearInterval(Interval);
             slideRight();
+            startInterval();
         }
         // 右へ移動した場合
         else if (moveX == "right") {
+            clearInterval(Interval);
             slideLeft();
+            startInterval();
         }
     }
 
