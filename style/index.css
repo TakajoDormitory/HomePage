@@ -43,8 +43,9 @@
 #department h3 {
   padding: 0.5em 1em;
   margin: 1em 0;
+  transition: border-left 400ms;
   background: white;
-  border-left: solid 6px #265b94;
+  border-left: solid 10px #265b94;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
 }
 @media screen and (max-width: 870px) {
@@ -55,9 +56,7 @@
 }
 
 #department h3:hover {
-  transition: 0.5s;
-  background-color: #253965;
-  color: white;
+  border-left: solid 15px #d59649;
 }
 #department .autor {
   color: white;
@@ -213,9 +212,10 @@
   margin: auto;
   text-align: center;
 }
-
+#page_top a {
+  transition: 400ms;
+}
 #page_top a:hover {
-  transition: 0.5s;
   opacity: 0.5;
 }
 
