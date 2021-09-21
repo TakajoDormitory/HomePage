@@ -1,8 +1,8 @@
 // htmlNameはcommon.jsで定義済み
-if (htmlName[htmlName.length - 2] == "en") {
+if (htmlName[htmlName.length - 2] == "english") {
   jsonPath = "../json/notice.json";
 } else {
-  jsonPath = "json/notice.json";
+  jsonPath = "assets/json/notice.json";
 }
 
 $(function () {
@@ -90,19 +90,19 @@ $(function () {
   // 表示する画像の配列を作成
   let imgList;
   // htmlNameはcommon.jsで定義済み
-  if (htmlName[htmlName.length - 2] == "en") {
+  if (htmlName[htmlName.length - 2] == "english") {
     imgList = [
-      "../img/OverView.jpg",
-      "../img/EntranceCeremony.JPG",
-      "../img/Firework.JPG",
-      "../img/soccer.jpg",
+      "../../assets/images/OverView.jpg",
+      "../../assets/images/EntranceCeremony.JPG",
+      "../../assets/images/Firework.JPG",
+      "../../assets/images/soccer.jpg",
     ];
   } else {
     imgList = [
-      "img/OverView.jpg",
-      "img/EntranceCeremony.JPG",
-      "img/Firework.JPG",
-      "img/soccer.jpg",
+      "assets/images/OverView.jpg",
+      "assets/images/EntranceCeremony.JPG",
+      "assets/images/Firework.JPG",
+      "assets/images/soccer.jpg",
     ];
   }
 
