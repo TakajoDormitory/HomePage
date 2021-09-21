@@ -15,19 +15,21 @@
 ## ディレクトリ構成
 
 ```
-.
+HomePage
 ├───assets
 │   ├───images
+│   │   └───Facility
 │   ├───json
 │   ├───movies
 │   ├───scripts
 │   └───styles
-├───belonging
-├───en
-│   └───belonging
-└───html
+└───pages
+    ├───english
+    ├───endeavors
     └───notice
+
 ```
+
 ## バグ、問題発見
 
 [テンプレート](https://github.com/TakajoDormitory/HomePage/issues/new/choose)にしたがって、[issue](https://github.com/TakajoDormitory/HomePage/issues)の投稿よろしくお願いします。
