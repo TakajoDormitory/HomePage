@@ -226,10 +226,7 @@ h4 {
   display: flex;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-}
-
-#share .twitter-share-button {
-  margin-right: 4px;
+  padding-right: 10vw;
 }
 
 /* 以下、ハンバーガーメニュー用 */
@@ -435,4 +432,27 @@ h4 {
 
 #container {
   margin: 100px 0;
+}
+
+.content #title {
+  border-bottom: solid 2px #a7212f;
+  display: inline-block;
+}
+.content #titleWrapper {
+  text-align: center;
+}
+.content #date {
+  margin: 10px auto;
+  font-size: 20px;
+}
+@media screen and (min-width: 870px) {
+  .content #date {
+    margin: 15px auto;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .content #date {
+    margin-left: 30px;
+  }
 }

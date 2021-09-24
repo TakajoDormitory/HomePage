@@ -4,14 +4,14 @@
 <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
   <!--Googleフォント-->
-  <link rel="stylesheet" href="../style/common.css" type="text/css">
+  <link rel="stylesheet" href="../assets/styles/common.css" type="text/css">
   <!--共通CSS-->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
-  <link rel="icon" href="../img/icon.png" sizes="32x32" />
+  <link rel="icon" href="../assets/images/icon.png" sizes="32x32" />
   <!--サイトアイコン-->
-  <link rel="icon" href="../Img/icon.png" sizes="192x192" />
+  <link rel="icon" href="../assets/images/icon.png" sizes="192x192" />
   <!--サイトアイコン-->
-  <link rel="apple-touch-icon-precomposed" href="../img/icon.png" />
+  <link rel="apple-touch-icon-precomposed" href="../assets/images/icon.png" />
   <!--Apple用サイトアイコン-->
   <meta charset="utf-8">
   <!--文字セット-->
@@ -30,7 +30,7 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="寮公式ホームページです。" />
   <!--簡易説明-->
-  <meta property="og:image" content="https://github.com/TakajoDormitory/HomePage/blob/master/img/icon.png" />
+  <meta property="og:image" content="https://github.com/TakajoDormitory/HomePage/blob/main/assets/images/icon.png" />
   <!--サイトアイコンURL-->
   <meta name="twitter:card" content="summary" />
   <meta property="twitter:site" content="@TakajoDormitory">
@@ -39,27 +39,6 @@
   <meta property="og:locale" content="ja_JP" />
   <!--言語設定-->
   <style>
-    @media screen and (min-width: 870px) {
-      #top_image {
-        text-align: center;
-      }
-
-      #top_image img {
-        width: 800px;
-        height: 629px;
-      }
-    }
-
-    @media screen and (max-width: 870px) {
-      #top_image {
-        text-align: center;
-      }
-
-      #top_image img {
-        width: 80vw;
-
-      }
-    }
   </style>
 </head>
 
@@ -69,7 +48,7 @@
     <a href="../index.html">
       <h1 id="title">Takajo Dormitory</h1>
     </a>
-    <a href="../en/index.html">
+    <a href="english/index.html">
       <h1 id="lang">ENGLISH</h1>
     </a>
     <a href="location.html"><i class="fas fa-map-marker-alt"></i></a>
@@ -88,60 +67,64 @@
           <script async src="https://cse.google.com/cse.js?cx=2af17a87c0426de29"></script>
           <div class="gcse-search"></div>
         </div>
-        <li><a href="../en/index.html">
+        <li><a href="english/index.html">
             <h3 class="lang">ENGLISH</h3>
           </a></li>
         <li><a href="purpose.html">寮の目的</a></li>
         <li><a href="facility.html">施設,設備</a></li>
         <li><a href="event.html">寮生活</a></li>
         <li><a href="cost.html">学寮経費</a></li>
-        <li><a href="../belonging/index.html">寮生用ページ</a></li>
+        <li><a href="student.html">寮生用ページ</a></li>
         <li><a href="contact.html">お問い合わせ</a></li>
       </ul>
     </nav>
   </div>
   <!--container-->
   <div id="container">
-    <h4>設備</h4><br>
-    <img src="../img/Facility/SingleRoom.jpg" alt="一人部屋の画像">
-    <p>一人部屋</p>
-    <img src="../img/Facility/DoubleRoom.jpg" alt="二人部屋の画像">
-    <p>二人部屋</p>
-    <img src="../img/Facility/KitchenSpace.jpg" alt="キッチンスペースの画像">
-    <p>キッチンスペース</p>
-    <img src="../img/Facility/LearningRoom.jpg" alt="ラーニングスペースの画像">
-    <p>ラーニングスペース</p>
-    <img src="../img/Facility/ShowerRoom.jpg" alt="シャワー室の画像">
-    <p>シャワー室</p>
-    <img src="../img/Facility/Bath" alt="浴室の画像">
-    <p>浴室</p>
-    <img src="../img/Facility/WashingRoom" alt="洗濯場の画像">
-    <p>洗濯場</p>
-    <img src="../img/Facility/Cafeteria" alt="食堂の画像">
-    <p>食堂</p>
-    <img src="../img/Facility/Bookshelf" alt="本棚の画像">
-    <p>本棚</p>
-    <img src="../img/Facility/PC" alt="食堂のPC,プリンタの画像">
-    <p>PC,プリンタ</p>
-    <img src="../img/Facility/3DPrinter" alt="3Dプリンタの画像">
-    <p>3Dプリンタ</p>
-    <img src="../img/Facility/ElectricBicycle" alt="電動自転車の画像">
-    <p>電動自転車</p>
-    <img src="../img/Facility/BicycleSpace" alt="駐輪場の画像">
-    <p>駐輪場</p>
+    <div class="content">
+      <h4>設備</h4>
+      <ul>
+        <li><img src="../assets/images/Facility/SingleRoom.jpg" alt="一人部屋の画像"></li>
+        <p>一人部屋</p>
+        <li><img src="../assets/images/Facility/DoubleRoom.jpg" alt="二人部屋の画像"></li>
+        <p>二人部屋</p>
+        <li><img src="../assets/images/Facility/KitchenSpace.jpg" alt="キッチンスペースの画像"></li>
+        <p>キッチンスペース</p>
+        <li><img src="../assets/images/Facility/LearningRoom.jpg" alt="ラーニングスペースの画像"></li>
+        <p>ラーニングスペース</p>
+        <li><img src="../assets/images/Facility/ShowerRoom.jpg" alt="シャワー室の画像"></li>
+        <p>シャワー室</p>
+        <li><img src="../assets/images/Facility/Bath" alt="浴室の画像"></li>
+        <p>浴室</p>
+        <li><img src="../assets/images/Facility/WashingRoom" alt="洗濯場の画像"></li>
+        <p>洗濯場</p>
+        <li><img src="../assets/images/Facility/Cafeteria" alt="食堂の画像"></li>
+        <p>食堂</p>
+        <li><img src="../assets/images/Facility/Bookshelf" alt="本棚の画像"></li>
+        <p>本棚</p>
+        <li><img src="../assets/images/Facility/PC" alt="食堂のPC,プリンタの画像"></li>
+        <p>PC,プリンタ</p>
+        <li><img src="../assets/images/Facility/3DPrinter" alt="3Dプリンタの画像"></li>
+        <p>3Dプリンタ</p>
+        <li><img src="../assets/images/Facility/ElectricBicycle" alt="電動自転車の画像"></li>
+        <p>電動自転車</p>
+        <li><img src="../assets/images/Facility/BicycleSpace" alt="駐輪場の画像"></li>
+        <p>駐輪場</p>
+      </ul>
+    </div>
   </div>
 
   <!--footer-->
   <div class="footer">
-    <img src="../img/footer.png">
+    <img src="../assets/images/footer.png">
     <a href="site.html">
       <p><span id="site">このサイトについて</span></p>
     </a>
     <p id="copyright">© 2020-2021 TakajoDormitory All Rights Reserved.</p>
   </div>
 
-  <script type="text/javascript" src="../script/jquery-3.5.1.min.js"></script> <!-- jquery -->
-  <script src="../script/common.js"></script>
+  <script type="text/javascript" src="../assets/scripts/jquery-3.5.1.min.js"></script> <!-- jquery -->
+  <script src="../assets/scripts/common.js"></script>
   <!--JS取り込み-->
 </body>
 

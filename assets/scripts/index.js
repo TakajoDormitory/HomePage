@@ -1,44 +1,42 @@
 // htmlNameはcommon.jsで定義済み
 if (htmlName[htmlName.length - 2] == "english") {
-  jsonPath = "../json/notice.json";
+  jsonPath = "../../../assets/json/notice.json";
 } else {
   jsonPath = "assets/json/notice.json";
 }
-
+console.log(jsonPath);
 $(function () {
   // notice.jsonからお知らせ情報を取得
   $.getJSON(jsonPath, function (data) {
-    for (let i = data.length - 1; i >= 0; i--) {
-      $("#list").append(
-        $(
-          "<li><dl><dt>" +
-            data[i].date +
-            '</dt><dd><a href="html/notice/' +
-            data[i].href +
-            '.html">' +
-            data[i].title +
-            "</a></dd></dl></li>"
-        )
-      );
-    }
-  });
-
-  // トップへ戻るボタン
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 150) {
-      pagetop.fadeIn();
+    if (htmlName[htmlName.length - 2] == "english") {
+      for (let i = data.length - 1; i >= 0; i--) {
+        $("#list").append(
+          $(
+            "<li><dl><dt>" +
+              data[i].date +
+              '</dt><dd><a href="../notice/' +
+              data[i].href +
+              '.html">' +
+              data[i].title +
+              "</a></dd></dl></li>"
+          )
+        );
+      }
     } else {
-      pagetop.fadeOut();
+      for (let i = data.length - 1; i >= 0; i--) {
+        $("#list").append(
+          $(
+            "<li><dl><dt>" +
+              data[i].date +
+              '</dt><dd><a href="pages/notice/' +
+              data[i].href +
+              '.html">' +
+              data[i].title +
+              "</a></dd></dl></li>"
+          )
+        );
+      }
     }
-  });
-  pagetop.click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    ); //0.5秒でトップへ移動
-    return false;
   });
 
   // ヘッダーの要素の色の変更
