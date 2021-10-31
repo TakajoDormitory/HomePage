@@ -1,15 +1,3 @@
-/* スクロールバーを非表示 */
-html {
-  /* IE, Edge 対応 */
-  -ms-overflow-style: none;
-  /* Firefox 対応 */
-  scrollbar-width: none;
-}
-/* Chrome, Safari 対応 */
-html::-webkit-scrollbar {
-  display: none;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -116,19 +104,18 @@ h4 {
     margin-right: 6vw;
   }
 }
+
 /* container内の表を装飾 */
 #container table {
   border: solid 1px #ccc;
   margin: auto;
   border-collapse: collapse;
 }
-
 @media screen and (max-width: 870px) {
   #container table {
     width: 100%;
   }
 }
-
 @media screen and (min-width: 870px) {
   #container table {
     width: 50%;
@@ -241,7 +228,20 @@ h4 {
   font-size: 16px;
   box-sizing: border-box;
   z-index: 2;
-  overflow: scroll;
+  overflow-y: scroll;
+
+  /* スクロールバー非表示 */
+  -ms-overflow-style: none; /* IE, Edge 対応 */
+  scrollbar-width: none; /* Firefox 対応 */
+}
+
+/* スクロールバー非表示 */
+body::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
+#wrapper nav::-webkit-scrollbar {
+  display: none;
 }
 
 #wrapper nav li {

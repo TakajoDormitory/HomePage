@@ -252,13 +252,13 @@
   transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 680px) {
   #video {
     height: 50vh;
   }
 }
 
-@media screen and (min-width: 870px) and (max-width: 1150px) {
+@media screen and (min-width: 680px) and (max-width: 1150px) {
   #video {
     min-width: 100%;
     min-height: 100%;

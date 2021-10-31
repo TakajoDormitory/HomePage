@@ -1,0 +1,25 @@
+.facility {
+  text-align: center;
+}
+
+@media screen and (min-width: 870px) {
+  .facility_element img {
+    width: 28vw;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .facility_element img {
+    width: 100%;
+  }
+}
+
+.facility_element {
+  display: inline-block;
+  margin: 20px;
+}
+
+.facility_element p {
+  text-align: center;
+  font-size: 1.2em;
+}
