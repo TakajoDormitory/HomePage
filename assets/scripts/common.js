@@ -104,11 +104,15 @@ $(function () {
     );
   });
 
-  $(".fb-like").attr({
-    "data-href": location.href,
+  $("#fb-share").attr({
+    href: "http://www.facebook.com/share.php?u=" + location.href,
   });
 
-  $(".line-it-button").attr({
-    "data-url": location.href,
+  $("#tw-share").attr({
+    href: "https://twitter.com/intent/tweet?text=" + location.href,
+  });
+
+  $("#line-share").attr({
+    href: "https://line.me/R/msg/text/?" + location.href,
   });
 });

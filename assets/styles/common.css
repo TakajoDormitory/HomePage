@@ -10,9 +10,19 @@ body {
 li {
   list-style: none;
 }
-a {
+a:not(#fb-share, #tw-share, #line-share) {
   text-decoration: none;
   color: #2997ff;
+}
+
+#fb-share {
+  color: #1877f2;
+}
+#tw-share {
+  color: #1da1f2;
+}
+#line-share {
+  color: #00c300;
 }
 
 h4 {
@@ -83,9 +93,9 @@ h4 {
   }
 }
 @media screen and (min-width: 870px) and (max-width: 1270px) {
-  .pair-left img,
-  .pair-right img {
-    width: 40vw;
+  .pair-left img:not(.Vertically-img),
+  .pair-right img:not(.Vertically-img) {
+    width: 35vw;
   }
   .pair-left .left-content {
     margin-right: 30px;
@@ -95,7 +105,7 @@ h4 {
   /* 縦長の写真を調節 */
   .pair-left img:not(.Vertically-img),
   .pair-right img:not(.Vertically-img) {
-    width: 40vw;
+    width: 35vw;
   }
   .Vertically-img {
     height: 600px;
@@ -209,13 +219,12 @@ h4 {
 }
 
 #share {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  padding-right: 10vw;
+  text-align: center;
+  margin-top: 25px;
 }
-
+#share a {
+  margin: 10px 10px;
+}
 /* 以下、ハンバーガーメニュー用 */
 #wrapper nav {
   position: fixed;
