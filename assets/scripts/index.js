@@ -1,41 +1,29 @@
+// お知らせ機能
 // htmlNameはcommon.jsで定義済み
+// 英語ページと日本語ページで相対パス変更
 if (htmlName[htmlName.length - 2] == "english") {
   jsonPath = "../../../assets/json/notice.json";
 } else {
   jsonPath = "assets/json/notice.json";
 }
-console.log(jsonPath);
 $(function () {
-  // notice.jsonからお知らせ情報を取得
+  // notice.jsonからお知らせ情報を取得、表示
   $.getJSON(jsonPath, function (data) {
-    if (htmlName[htmlName.length - 2] == "english") {
-      for (let i = data.length - 1; i >= 0; i--) {
-        $("#list").append(
-          $(
-            "<li><dl><dt>" +
-              data[i].date +
-              '</dt><dd><a href="../notice/' +
-              data[i].href +
-              '.html">' +
-              data[i].title +
-              "</a></dd></dl></li>"
-          )
-        );
-      }
-    } else {
-      for (let i = data.length - 1; i >= 0; i--) {
-        $("#list").append(
-          $(
-            "<li><dl><dt>" +
-              data[i].date +
-              '</dt><dd><a href="pages/notice/' +
-              data[i].href +
-              '.html">' +
-              data[i].title +
-              "</a></dd></dl></li>"
-          )
-        );
-      }
+    for (let i = data.length - 1; i >= 0; i--) {
+      $("#list").append(
+        $(
+          "<li><dl><dt>" +
+            data[i].date +
+            // 英語ページと日本語ページで相対パス変更
+            (htmlName[htmlName.length - 2] == "english"
+              ? '</dt><dd><a href="../notice/'
+              : '</dt><dd><a href="pages/notice/') +
+            data[i].href +
+            '.html">' +
+            data[i].title +
+            "</a></dd></dl></li>"
+        )
+      );
     }
   });
 
@@ -43,7 +31,7 @@ $(function () {
   let header = $("#header h1,#header i");
   let nav = $("#wrapper .btn-gnavi span");
   $(window).scroll(function () {
-    // ビデオより下にスクロールしたとき色を黒
+    // ビデオより下にスクロールしたとき色を黒,アニメーション速度初期化
     if ($(this).scrollTop() > videoArea.height() - 150) {
       header.css({ transition: "all  1.0s ease", color: "#000" });
       nav.css({ transition: "all  1.0s ease", "background-color": "#000" });
@@ -87,7 +75,6 @@ $(function () {
   // スライダー処理
   // 表示する画像の配列を作成
   let imgList;
-  // htmlNameはcommon.jsで定義済み
   if (htmlName[htmlName.length - 2] == "english") {
     imgList = [
       "../../assets/images/OverView.jpg",

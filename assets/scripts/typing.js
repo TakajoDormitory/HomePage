@@ -25,8 +25,12 @@ function TextTypingAnime(ClassName) {
   });
 }
 
-// 画面が読み込まれたらすぐに動作させる
+// 画面が読み込まれるまで非表示
+$("#container").css("opacity", "0");
+// 画面が読み込まれたら動作
 $(window).on("load", function () {
+  // 画面が読み込まれたら表示
+  $("#container").css("opacity", "1");
   //spanタグを追加する
   var element = $(".TextTyping");
   element.each(function () {

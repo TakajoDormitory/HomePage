@@ -13,24 +13,6 @@ for (let i = 0; i < metaLength; i++) {
 let pagetop = $("#page_top");
 pagetop.hide();
 
-// トップへ戻るボタン
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 150) {
-    pagetop.fadeIn();
-  } else {
-    pagetop.fadeOut();
-  }
-});
-pagetop.click(function () {
-  $("body,html").animate(
-    {
-      scrollTop: 0,
-    },
-    500
-  ); //0.5秒でトップへ移動
-  return false;
-});
-
 // ファイル名を取得
 let htmlName = location.href.split("/");
 // indexにいるか判定
@@ -51,6 +33,27 @@ let videoArea = $("#video-area");
 let mouseY = 0;
 
 $(function () {
+  // トップへ戻るボタン
+  $(window).scroll(function () {
+    // スクロール位置が150に達したら表示
+    if ($(this).scrollTop() > 150) {
+      pagetop.fadeIn();
+    } else {
+      pagetop.fadeOut();
+    }
+  });
+  pagetop.click(function () {
+    //0.5秒でトップへ移動
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      500
+    );
+    return false;
+  });
+
+  // ハンバーガーメニュー
   $(".btn-gnavi,.fa-search").on("click", function () {
     // ハンバーガーメニューのコンテンツの位置を格納する変数
     let rightVal = 0;
@@ -104,15 +107,20 @@ $(function () {
     );
   });
 
+  // シェアボタンのリンクの自動追加
   $("#fb-share").attr({
     href: "http://www.facebook.com/share.php?u=" + location.href,
   });
 
   $("#tw-share").attr({
-    href: "https://twitter.com/intent/tweet?text=" + location.href,
+    href:
+      "https://twitter.com/intent/tweet?text=" +
+      document.title.split("|")[0] +
+      " " +
+      location.href,
   });
 
   $("#line-share").attr({
-    href: "https://line.me/R/msg/text/?" + location.href,
+    href: "https://line.me/R/msg/text/?" + document.title + " " + location.href,
   });
 });
