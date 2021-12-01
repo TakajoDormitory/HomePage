@@ -1,0 +1,28 @@
+.student {
+  text-align: center;
+}
+
+.student_element {
+  display: inline-block;
+  margin: 20px;
+}
+
+.student_element p {
+  text-align: center;
+}
+
+@media screen and (min-width: 870px) {
+  .student_element img {
+    width: 250px;
+  }
+
+  .student_element p {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .student_element img {
+    width: 200px;
+  }
+}
