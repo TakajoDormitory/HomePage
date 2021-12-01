@@ -6,7 +6,34 @@ if (htmlName[htmlName.length - 2] == "english") {
 } else {
   jsonPath = "assets/json/notice.json";
 }
+
+// ウィンドウ縦横比の取得
+let screenHeight, screenWidth, widthRaito;
+screenHeight = window.innerHeight;
+screenWidth = window.innerWidth;
+widthRaito = screenWidth / screenHeight;
+
+// トップ動画のサイズの最適化
+function movieResize() {
+  // 870px以下の場合のみ考慮
+  if (screenWidth < 870) {
+    if (widthRaito > 1.5) {
+      $("#video-area").css({ height: "100vh" });
+      $("#video").css({ width: "100vw" });
+      $("#video-area h1").css({ top: "60vh" });
+    } else {
+      $("#video-area").css({ height: "50vh" });
+      $("#video").css({ height: "50vh" });
+      $("#video-area h1").css({ top: "35vh" });
+    }
+  }
+}
+
 $(function () {
+  movieResize();
+  // ウィンドウサイズ変更時にトップ動画のサイズの最適化
+  $(window).resize(movieResize());
+
   // notice.jsonからお知らせ情報を取得、表示
   $.getJSON(jsonPath, function (data) {
     for (let i = data.length - 1; i >= 0; i--) {

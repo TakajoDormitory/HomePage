@@ -226,8 +226,6 @@
 
 @media screen and (max-width: 870px) {
   #video-area {
-    width: 100%;
-    height: 50vh;
     overflow: hidden;
   }
 }
@@ -250,12 +248,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-@media screen and (max-width: 870px) {
-  #video {
-    height: 50vh;
-  }
 }
 
 @media screen and (min-width: 870px) and (max-width: 1150px) {
@@ -291,7 +283,6 @@
   #video-area h1 {
     padding-left: 10px;
     font-size: 40px;
-    top: 35vh;
     left: 40%;
     width: 60vw;
   }
