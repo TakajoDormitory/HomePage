@@ -38,7 +38,7 @@ h4 {
   font-size: 20px;
 }
 @media screen and (min-width: 870px) {
-  #container h4,
+  #container h4:not(.middle-content),
   #container h5 {
     margin-left: 5vw;
   }
@@ -70,7 +70,7 @@ h4 {
   }
 }
 @media screen and (max-width: 870px) {
-  #container h4,
+  #container h4:not(.middle-content),
   #container h5 {
     margin-left: 30px;
   }
