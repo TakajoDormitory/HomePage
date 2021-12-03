@@ -232,7 +232,7 @@
 
 @media screen and (min-width: 870px) and (max-width: 1150px) {
   #video-area {
-    height: 50vh;
+    height: 65vh;
   }
 }
 
@@ -292,7 +292,7 @@
   #video-area h1 {
     font-size: 50px;
     width: 530px;
-    top: 35vh;
+    top: 45vh;
     left: 35vw;
     text-align: center;
   }

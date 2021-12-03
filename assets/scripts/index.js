@@ -17,10 +17,11 @@ widthRaito = screenWidth / screenHeight;
 function movieResize() {
   // 870px以下の場合のみ考慮
   if (screenWidth < 870) {
-    if (widthRaito > 1.5) {
-      $("#video-area").css({ height: "100vh" });
+    // 横が縦の約16/(9*2) (動画の縦幅がウィンドウ縦幅の半分でOK)以上の場合
+    if (widthRaito > 0.8) {
+      $("#video-area").css({ height: "56.25vw" });
       $("#video").css({ width: "100vw" });
-      $("#video-area h1").css({ top: "60vh" });
+      $("#video-area h1").css({ top: "40vw" });
     } else {
       $("#video-area").css({ height: "50vh" });
       $("#video").css({ height: "50vh" });
@@ -31,8 +32,17 @@ function movieResize() {
 
 $(function () {
   movieResize();
-  // ウィンドウサイズ変更時にトップ動画のサイズの最適化
-  $(window).resize(movieResize());
+
+  // ウィンドウリサイズ時に動画のサイズを調整
+  var timer = "";
+  $(window).on("resize", function () {
+    if (timer) {
+      clearTimeout(timer);
+    }
+    timer = setTimeout(function () {
+      movieResize();
+    }, 200);
+  });
 
   // notice.jsonからお知らせ情報を取得、表示
   $.getJSON(jsonPath, function (data) {
