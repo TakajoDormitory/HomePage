@@ -86,7 +86,7 @@ $(function () {
       $(".btn-gnavi").addClass("open");
       // searchボタンが押されたときは検索欄にカーソル自動移動
       if ($(this).hasClass("fa-search")) {
-        $(".gsc-input").focus();
+        $("#input").focus();
       }
       // スクロール制限を設定
       $("html").css({ "overflow-y": "hidden" });
@@ -121,6 +121,10 @@ $(function () {
   });
 
   $("#line-share").attr({
-    href: "https://line.me/R/msg/text/?" + document.title + " " + location.href,
+    href:
+      "https://line.me/R/msg/text/?" +
+      document.title +
+      "%0D%0A" +
+      location.href,
   });
 });

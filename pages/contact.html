@@ -4,6 +4,7 @@
 <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/styles/common.css" type="text/css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> <!-- Font Awesome -->
   <link rel="icon" href="../assets/images/favicon/favicon-16x16.png" sizes="16x16" />
   <link rel="icon" href="../assets/images/favicon/favicon-32x32.png" sizes="32x32" />
@@ -76,10 +77,12 @@
     </p>
     <nav id="bar">
       <ul>
-        <div class="search">
-          <script async src="https://cse.google.com/cse.js?cx=2af17a87c0426de29"></script>
-          <div class="gcse-search"></div>
-        </div>
+        <form action="result.html" class="search_container">
+          <div class="search_back">
+            <input type="text" size="25" placeholder="キーワード検索" id="input" name="search-key">
+            <input type="submit" value="&#xf002">
+          </div>
+        </form>
         <li><a href="english/index.html">
             <h3 class="lang">ENGLISH</h3>
           </a></li>
