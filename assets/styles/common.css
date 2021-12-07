@@ -466,9 +466,6 @@ body::-webkit-scrollbar {
   }
 }
 
-.search_container {
-  width: 300px;
-}
 .search_container input[type="text"] {
   padding: 3px 5px;
   border: none;
@@ -478,11 +475,22 @@ body::-webkit-scrollbar {
 }
 .search_back {
   width: 230px;
-  padding: 3px 0px;
   text-align: center;
   border-radius: 20px;
   background-color: white;
   display: inline-block;
+}
+
+/* バランス整える */
+@media screen and (min-width: 870px) {
+  .search_back {
+    padding: 3px 0px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .search_back {
+    padding: 10px 0px;
+  }
 }
 .search_container input[type="text"]:focus {
   outline: 0;
@@ -490,6 +498,7 @@ body::-webkit-scrollbar {
 .search_container input[type="submit"] {
   cursor: pointer;
   font-family: FontAwesome;
+  width: 32px;
   font-size: 1.3em;
   border: none;
   background: none;
