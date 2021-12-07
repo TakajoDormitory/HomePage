@@ -4,14 +4,20 @@
 
 .student_element {
   display: inline-block;
-  margin: 20px;
+}
+
+.student_element img {
+  border-radius: 10%;
 }
 
 .student_element p {
   text-align: center;
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 767px) {
+  .student_element {
+    margin: 20px;
+  }
   .student_element img {
     width: 250px;
   }
@@ -21,8 +27,14 @@
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 767px) {
+  .student_element {
+    width: 30vw;
+  }
   .student_element img {
-    width: 200px;
+    width: 25vw;
+  }
+  .student_element p {
+    font-size: 3vw;
   }
 }
