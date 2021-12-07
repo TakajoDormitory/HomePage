@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 870px) {
   .student_element {
     margin: 20px;
   }
@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 870px) {
   .student_element {
     width: 30vw;
   }
