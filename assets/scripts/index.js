@@ -47,16 +47,25 @@ $(function () {
   // notice.jsonからお知らせ情報を取得、表示
   $.getJSON(jsonPath, function (data) {
     for (let i = data.length - 1; i >= 0; i--) {
+      // お知らせのリンク
+      // httpから始まっていなかったら相対パス
+      if (!(data[i].href.slice(0, 4) == "http")) {
+        // 英語ページと日本語ページで相対パス変更
+        if (htmlName[htmlName.length - 2] == "english") {
+          notice_path = "../notice/" + data[i].href + ".html";
+        } else {
+          notice_path = "pages/notice/" + data[i].href + ".html";
+        }
+      } else {
+        notice_path = data[i].href;
+      }
       $("#list").append(
         $(
           "<li><dl><dt>" +
             data[i].date +
-            // 英語ページと日本語ページで相対パス変更
-            (htmlName[htmlName.length - 2] == "english"
-              ? '</dt><dd><a href="../notice/'
-              : '</dt><dd><a href="pages/notice/') +
-            data[i].href +
-            '.html">' +
+            '</dt><dd><a href="' +
+            notice_path +
+            '">' +
             data[i].title +
             "</a></dd></dl></li>"
         )
