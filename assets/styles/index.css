@@ -267,7 +267,19 @@
   }
 }
 
-#video-area h1 {
+#video-area #message-ja {
+  z-index: 1;
+  font-weight: 400;
+  /*要素の配置*/
+  position: absolute;
+  /*要素を天地中央寄せ*/
+  transform: translateY(-50%) translateX(-50%);
+  /*見た目の調整*/
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#video-area #message {
   z-index: 1;
   font-weight: 400;
   /*要素の配置*/
@@ -280,18 +292,31 @@
 }
 
 @media screen and (max-width: 870px) {
-  #video-area h1 {
+  #video-area #message {
     padding-left: 10px;
     font-size: 40px;
+    left: 40%;
+    width: 60vw;
+  }
+  #video-area #message-ja {
+    padding-left: 10px;
+    font-size: 4vw;
     left: 40%;
     width: 60vw;
   }
 }
 
 @media screen and (min-width: 870px) and (max-width: 1150px) {
-  #video-area h1 {
+  #video-area #message {
     font-size: 50px;
     width: 530px;
+    top: 45vh;
+    left: 35vw;
+    text-align: center;
+  }
+  #video-area #message-ja {
+    font-size: 4vw;
+    width: 60vw;
     top: 45vh;
     left: 35vw;
     text-align: center;
@@ -299,12 +324,19 @@
 }
 
 @media screen and (min-width: 1150px) {
-  #video-area h1 {
+  #video-area #message {
     top: 60vh;
     left: 70vw;
     width: 550px;
     padding-left: 40px;
     font-size: 80px;
+  }
+  #video-area #message-ja {
+    top: 70vh;
+    left: 70vw;
+    width: 50vw;
+    padding-left: 40px;
+    font-size: 3.5vw;
   }
 }
 
