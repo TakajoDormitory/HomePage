@@ -14,20 +14,20 @@
   text-align: center;
 }
 
-@media screen and (min-width: 870px) {
+@media screen and (min-width: 600px) {
   .student_element {
     margin: 20px;
   }
   .student_element img {
-    width: 250px;
+    width: 120px;
   }
 
   .student_element p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 600px) {
   .student_element {
     width: 30vw;
   }
