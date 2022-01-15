@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-style: normal;
-  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
+    "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic",
+    sans-serif;
   -webkit-overflow-scrolling: auto;
 }
 li {
@@ -149,6 +151,7 @@ h4 {
 }
 
 #bar li {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   padding: 10px 2em;
   font-size: 18px;
   float: right;
@@ -375,6 +378,7 @@ body::-webkit-scrollbar {
   font-weight: 400;
 }
 #header #title-ja {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   left: 100px;
   font-weight: 400;
 }
@@ -387,6 +391,9 @@ body::-webkit-scrollbar {
 @media screen and (min-width: 0px) and (max-width: 870px) {
   #header #title {
     left: 150px;
+  }
+  #header #title-ja {
+    left: 80px;
   }
 }
 
