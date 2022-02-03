@@ -77,6 +77,14 @@ $(function () {
   let header = $("#header h1,#header i");
   let nav = $("#wrapper .btn-gnavi span");
   $(window).scroll(function () {
+    // スクロールを促すボタンを非表示
+    if ($(this).scrollTop() > videoArea.height() - window.innerHeight) {
+      $(".scroll_down").css({ transition: "all  1.0s ease", opacity: 0 });
+    }
+    // スクロールを促すボタンを表示
+    else {
+      $(".scroll_down").css({ opacity: 1 });
+    }
     // ビデオより下にスクロールしたとき色を黒,アニメーション速度初期化
     if ($(this).scrollTop() > videoArea.height() - 150) {
       header.css({ transition: "all  1.0s ease", color: "#000" });

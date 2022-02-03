@@ -573,3 +573,81 @@
 #container {
   margin-top: 0px;
 }
+
+@media screen and (min-width: 1150px) {
+  .scroll_down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+  }
+
+  /*Scrollテキストの描写*/
+  .scroll_down span {
+    /*描画位置*/
+    position: absolute;
+    left: 10px;
+    bottom: 30px;
+    /*テキストの形状*/
+    color: #eee;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    /*縦書き設定*/
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+
+  /* 丸の描写 */
+  .scroll_down:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: -6px;
+    /*丸の形状*/
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+    animation: circlemove 1.6s ease-in-out infinite,
+      cirlemovehide 1.6s ease-out infinite;
+  }
+
+  @keyframes circlemove {
+    0% {
+      bottom: 95px;
+    }
+    100% {
+      bottom: -5px;
+    }
+  }
+
+  @keyframes cirlemovehide {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.9;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* 線の描写 */
+  .scroll_down:after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    width: 3px;
+    height: 100px;
+    background: #eee;
+  }
+}
