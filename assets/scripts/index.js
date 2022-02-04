@@ -15,8 +15,8 @@ widthRaito = screenWidth / screenHeight;
 
 // トップ動画のサイズの最適化
 function movieResize() {
-  // 870px以下の場合のみ考慮
-  if (screenWidth < 870) {
+  // 1150px以下の場合
+  if (screenWidth < 1150) {
     // 横が縦の約16/(9*2) (動画の縦幅がウィンドウ縦幅の半分でOK)以上の場合
     if (widthRaito > 0.8) {
       $("#video-area").css({ height: "56.25vw" });
@@ -32,7 +32,6 @@ function movieResize() {
 
 $(function () {
   movieResize();
-
   // ウィンドウリサイズ時に動画のサイズを調整
   var timer = "";
   $(window).on("resize", function () {

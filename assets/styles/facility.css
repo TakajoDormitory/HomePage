@@ -1,6 +1,9 @@
 .facility {
   text-align: center;
 }
+img {
+  border-radius: 2.5%;
+}
 
 @media screen and (min-width: 870px) {
   .facility_element img {
