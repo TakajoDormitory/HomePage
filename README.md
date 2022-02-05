@@ -1,16 +1,16 @@
 <div align="center">
-<a href="https://takajodormitory.github.io/HomePage/">
+<a href="https://dormitory.tokuyama.ac.jp/">
 
-# 高城寮ホームページ開発用サイト
+![logo](https://user-images.githubusercontent.com/63878044/152642659-9d08ca10-3ca8-4b29-8de5-616bd64c4f82.jpg)
 
 </a>
-
+<h1>高城寮ホームページ開発リポジトリ</h1>
 </div>
 
-## 開発用サイトについて
+## 概要
 
-[本サイト](https://takajodormitory.github.io/HomePage/index.html)は、[高城寮のホームページ](https://dormitory.tokuyama.ac.jp/)の開発用のサイトです。  
-このリポジトリでサイトを開発し、GitHub Pages を使って開発中のサイトを公開します。
+[高城寮ホームページ](https://dormitory.tokuyama.ac.jp/)の開発用リポジトリです。  
+このリポジトリでサイトを開発し、サーバにデプロイしています。
 
 ## ディレクトリ構成
 
@@ -32,6 +32,11 @@ HomePage
     └───notice
 
 ```
+
+## プルリクエスト
+
+どしどしお願いします。  
+軽微な修正等、動作確認の必要がない場合はテンプレートのままで OK です。
 
 ## バグ、問題発見
 
