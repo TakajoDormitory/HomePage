@@ -127,4 +127,11 @@ $(function () {
       "%0D%0A" +
       location.href,
   });
+
+  // コピーライト自動更新
+  $("#copyright").html(
+    "&copy; 2020-" +
+      new Date().getFullYear() +
+      " TakajoDormitory All Rights Reserved."
+  );
 });
