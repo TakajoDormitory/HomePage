@@ -1,4 +1,4 @@
-//og:urlの値を自動設定
+// autoset the value of og:url
 let metaDiscre = document.head.children;
 let metaLength = metaDiscre.length;
 for (let i = 0; i < metaLength; i++) {
@@ -9,13 +9,13 @@ for (let i = 0; i < metaLength; i++) {
   }
 }
 
-// indexのページ上部ボタン
+// back to top
 let pagetop = $("#page_top");
 pagetop.hide();
 
-// ファイル名を取得
+// get the file name
 let htmlName = location.href.split("/");
-// indexにいるか判定
+// determine index
 let onIndex = false;
 if (
   htmlName[htmlName.length - 1] == "index.html" ||
@@ -25,17 +25,15 @@ if (
   onIndex = true;
 }
 
-// ハンバーガーメニュー
 let nav = $("#wrapper .btn-gnavi span");
-// videoの範囲を抽出
 let videoArea = $("#video-area");
-// マウスのY座標を格納する変数
+// mouse Y coordinate
 let mouseY = 0;
 
 $(function () {
-  // トップへ戻るボタン
+  // Back to Top Button
   $(window).scroll(function () {
-    // スクロール位置が150に達したら表示
+    // Display when the scroll position reaches 150
     if ($(this).scrollTop() > 150) {
       pagetop.fadeIn();
     } else {
@@ -43,7 +41,7 @@ $(function () {
     }
   });
   pagetop.click(function () {
-    //0.5秒でトップへ移動
+    // 0.5 seconds to top
     $("body,html").animate(
       {
         scrollTop: 0,
@@ -53,17 +51,17 @@ $(function () {
     return false;
   });
 
-  // ハンバーガーメニュー
+  // humberger menu
   $(".btn-gnavi,.fa-search").on("click", function () {
-    // ハンバーガーメニューのコンテンツの位置を格納する変数
+    // content location
     let rightVal = 0;
-    // 開いた状態であれば閉じる
+    // if it's open, close it.
     if ($(".btn-gnavi").hasClass("open")) {
-      // スクロール制限を解除
+      // remove scroll restriction
       $("html").css({ "overflow-y": "visible" });
-      // アニメーション速度を遅くする
+      // slow down the animation speed
       nav.css({ transition: "all  1.0s ease" });
-      // index.htmlならマウスのY座標を取得、ボタンをフェードイン
+      // get Y coordinate of mouse, fade in button
       if (onIndex) {
         document.addEventListener("mousemove", function (e) {
           mouseY = e.pageY;
@@ -73,29 +71,26 @@ $(function () {
       } else {
         pagetop.fadeIn();
       }
-      // index.htmlではないもしくは
-      // index.htmlかつビデオより下なら背景色を変更
       if (!onIndex || (onIndex && mouseY > videoArea.height())) {
         nav.css({ "background-color": "#000" });
       }
       rightVal = -300;
       $(this).removeClass("open");
     }
-    // 閉じた状態であれば開く
+    // if it's close, open it.
     else {
       $(".btn-gnavi").addClass("open");
-      // searchボタンが押されたときは検索欄にカーソル自動移動
+      // cursor move to the search field
       if ($(this).hasClass("fa-search")) {
         $("#input").focus();
       }
-      // スクロール制限を設定
+      // set scroll restriction
       $("html").css({ "overflow-y": "hidden" });
       $("#wrapper").css({ "overflow-y": "visible" });
-      // アニメーション速度を矢印用に設定
       nav.css({ transition: "all  0.3s ease" });
-      // 背景色を白色にする
+      // change backgroundcolor to white
       nav.css({ "background-color": "#FFF" });
-      // ボタンをフェードアウト
+      // fadeout button
       pagetop.fadeOut();
     }
 
@@ -107,7 +102,7 @@ $(function () {
     );
   });
 
-  // シェアボタンのリンクの自動追加
+  // autoset location link
   $("#fb-share").attr({
     href: "http://www.facebook.com/share.php?u=" + location.href,
   });
@@ -128,7 +123,7 @@ $(function () {
       location.href,
   });
 
-  // コピーライト自動更新
+  // autoset copyright year
   $("#copyright").html(
     "&copy; 2020-" +
       new Date().getFullYear() +

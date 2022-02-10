@@ -1,23 +1,20 @@
-// お知らせ機能
-// htmlNameはcommon.jsで定義済み
-// 英語ページと日本語ページで相対パス変更
+// Change relative paths between English and Japanese pages
 if (htmlName[htmlName.length - 2] == "english") {
   jsonPath = "../../../assets/json/notice.json";
 } else {
   jsonPath = "assets/json/notice.json";
 }
 
-// ウィンドウ縦横比の取得
+// Get the window aspect ratio
 let screenHeight, screenWidth, widthRaito;
 screenHeight = window.innerHeight;
 screenWidth = window.innerWidth;
 widthRaito = screenWidth / screenHeight;
 
-// トップ動画のサイズの最適化
+// Optimize the size of the video
 function movieResize() {
-  // 1150px以下の場合
   if (screenWidth < 1150) {
-    // 横が縦の約16/(9*2) (動画の縦幅がウィンドウ縦幅の半分でOK)以上の場合
+    // the height of the video can be half of the window height
     if (widthRaito > 0.8) {
       $("#video-area").css({ height: "56.25vw" });
       $("#video").css({ width: "100vw" });
@@ -31,8 +28,8 @@ function movieResize() {
 }
 
 $(function () {
+  // Adjust video size when resizing window
   movieResize();
-  // ウィンドウリサイズ時に動画のサイズを調整
   var timer = "";
   $(window).on("resize", function () {
     if (timer) {
@@ -43,13 +40,10 @@ $(function () {
     }, 200);
   });
 
-  // notice.jsonからお知らせ情報を取得、表示
+  // Obtain and display notification information
   $.getJSON(jsonPath, function (data) {
     for (let i = data.length - 1; i >= 0; i--) {
-      // お知らせのリンク
-      // httpから始まっていなかったら相対パス
       if (!(data[i].href.slice(0, 4) == "http")) {
-        // 英語ページと日本語ページで相対パス変更
         if (htmlName[htmlName.length - 2] == "english") {
           notice_path = "../notice/" + data[i].href + ".html";
         } else {
@@ -72,19 +66,17 @@ $(function () {
     }
   });
 
-  // ヘッダーの要素の色の変更
+  // Change the color of header elements
   let header = $("#header h1,#header i");
   let nav = $("#wrapper .btn-gnavi span");
   $(window).scroll(function () {
-    // スクロールを促すボタンを非表示
+    // Hide the button that prompts for scrolling
     if ($(this).scrollTop() > videoArea.height() - window.innerHeight) {
       $(".scroll_down").css({ transition: "all  1.0s ease", opacity: 0 });
-    }
-    // スクロールを促すボタンを表示
-    else {
+    } else {
       $(".scroll_down").css({ opacity: 1 });
     }
-    // ビデオより下にスクロールしたとき色を黒,アニメーション速度初期化
+    // scrolling below video
     if ($(this).scrollTop() > videoArea.height() - 150) {
       header.css({ transition: "all  1.0s ease", color: "#000" });
       nav.css({ transition: "all  1.0s ease", "background-color": "#000" });
@@ -92,16 +84,14 @@ $(function () {
         transition: "all  1.0s ease",
         "background-color": "#FFF",
       });
-    }
-    // それ以外は色を白
-    else {
+    } else {
       header.css({ color: "#FFF" });
       nav.css({ "background-color": "#FFF" });
       $("#header").css({ "background-color": "rgba(0,0,0,0)" });
     }
   });
 
-  // 画像が押されたらyoutubeのiframeを読み込む
+  // Load a youtube iframe when the image is pressed
   $(".youtube").each(function () {
     var iframe = $(this).children("iframe");
     var url = iframe.attr("data-src");
@@ -125,8 +115,7 @@ $(function () {
     });
   });
 
-  // スライダー処理
-  // 表示する画像の配列を作成
+  // slider
   let imgList;
   if (htmlName[htmlName.length - 2] == "english") {
     imgList = [
@@ -144,72 +133,70 @@ $(function () {
     ];
   }
 
-  // 画像とナビの要素を自動で追加
+  // add image and navigation buttons
   for (let i = 0; i < imgList.length; i++) {
-    // li要素を取得
+    // Embed image tags in the li element
     let slide = document.createElement("li");
-    // li要素の中に画像タグを埋め込む
     if (window.innerWidth < 1450)
       slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
     else
       slide.innerHTML =
         "<img width='800px' height='450px' src='" + imgList[i] + "'>";
-    // li要素をクラス名「slider-inner」の子要素として追加
+    // Add the li as a child element
     document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
-    // li要素を取得
+    // get the li element
     let nav = document.createElement("li");
-    // プロパティ「data-nav-index」に数値を割り振る
+    // Assign a numerical value
     nav.setAttribute("data-nav-index", i);
-    // li要素をクラス名「nav」の子要素として追加
+    // Add the li as a child element
     document.getElementsByClassName("nav")[0].appendChild(nav);
   }
 
-  // スライドの数を取得(処理のために-1する)
+  // Get the number of slides (-1 for processing)
   let length = imgList.length - 1;
-  // クラス名「imageSlide」に画像の1枚の要素を格納
+  // Store a single element of an image
   let imageSlide = document
     .getElementsByClassName("slider-inner")[0]
     .getElementsByTagName("li");
-  // クラス名「dotNavigation」にドットナビの1つの要素を格納
+  // Store one element of the dot navigation
   let dotNavigation = document
     .getElementsByClassName("nav")[0]
     .getElementsByTagName("li");
-  // 「現在○○枚目のスライドを表示している」というインデックス番号を格納する変数
+  // index number
   let nowIndex = 0;
-  // 現在表示されている画像とドットナビにクラス名を付ける
   imageSlide[nowIndex].classList.add("show");
   dotNavigation[nowIndex].classList.add("current");
-  // スライドがアニメーション中か判断するフラグ
+  // flag that slide is in animation
   let isChanging = false;
-  // スライド切り替え時に呼び出す関数
+  // function called when switching slides
   function sliderSlide(val) {
     if (isChanging === true) {
       return false;
     }
     isChanging = true;
-    // 現在表示している画像とナビからクラス名を削除
+    // Remove the class name from the currently displayed image and nav
     imageSlide[nowIndex].classList.remove("show");
     dotNavigation[nowIndex].classList.remove("current");
     nowIndex = val;
-    // 次に表示するスライドとナビにカレントクラスを設定
+    // Set the current class
     imageSlide[nowIndex].classList.add("show");
     dotNavigation[nowIndex].classList.add("current");
-    // アニメーションが終わるタイミングでisChangingのステータスをfalseに
+    // Set the status of changing to false
     slideTimer = setTimeout(function () {
       isChanging = false;
     }, 600);
   }
 
-  //スライド自動送りを開始する関数
+  //start automatic slide feed
   function startInterval() {
     Interval = setInterval(slideRight, 4000);
   }
 
-  //スライド自動送りを開始
+  //Start automatic slide feed
   startInterval();
 
-  //画像及びナビにホバーで自動送り停止
+  // Automatic feed stop on hover to image and navigation
   $("#slider img").hover(
     function () {
       clearInterval(Interval);
@@ -219,9 +206,9 @@ $(function () {
     }
   );
 
-  // ドットナビをクリックした時のイベントを作成
+  // Create an event
   for (let i = 0; i < dotNavigation.length; i++) {
-    // データ属性のインデックス番号を元にスライドを行う
+    // Slide based on the index number
     dotNavigation[i].addEventListener(
       "click",
       function () {
@@ -232,60 +219,59 @@ $(function () {
     );
   }
 
-  // 左矢印のナビをクリックした時のイベント
+  // Left arrow navigation is clicked
   $("#arrow-prev").on("click", function () {
     clearInterval(Interval);
     slideLeft();
     startInterval();
   });
-  // 右矢印のナビをクリックした時のイベント
+  // Right arrow navigation is clicked
   $("#arrow-next").on("click", function () {
     clearInterval(Interval);
     slideRight();
     startInterval();
   });
 
-  // スワイプ
-  // 指が触れたらstartSwipeを実行
+  // Swipe
+  // finger touches it
   $("#slider img").on("touchstart", startSwipe);
 
-  // 指が動いたらSwipingを実行
+  // finger moving
   $("#slider img").on("touchmove", Swiping);
 
-  // 指が離れたらendSwipeを実行
+  // finger leaves it
   $("#slider img").on("touchend", endSwipe);
 
   var moveX, posiX;
-  // 指が触れた時の処理
+  // finger leaves it
   function startSwipe(event) {
-    // 現在の座標を取得
+    // Get the current position of the finger
     posiX = getX(event);
-
-    // 結果の変数を初期化
+    // Result variable
     moveX = "";
   }
 
-  // 指が動いている時の処理
+  // finger moving
   function Swiping(event) {
-    // 右から左へ70px以上スワイプ
+    // Swipe at least 70px from right to left
     if (posiX - getX(event) > 70) {
       moveX = "left";
     }
-    // 左から右へ70px以上スワイプ
+    // Swipe at least 70px from left to right
     else if (posiX - getX(event) < -70) {
       moveX = "right";
     }
   }
 
-  // 指が離れたときの処理
+  // finger leaves it
   function endSwipe(event) {
-    // 左へ移動していた場合
+    // moving to the left
     if (moveX == "left") {
       clearInterval(Interval);
       slideRight();
       startInterval();
     }
-    // 右へ移動した場合
+    // moving to the right
     else if (moveX == "right") {
       clearInterval(Interval);
       slideLeft();
@@ -293,7 +279,7 @@ $(function () {
     }
   }
 
-  // 左へスライドする関数
+  // Function to slide to the left
   function slideLeft() {
     let index = nowIndex - 1;
     if (index < 0) {
@@ -302,7 +288,7 @@ $(function () {
     sliderSlide(index);
   }
 
-  // 右へスライドする関数
+  // Function to slide to the right
   function slideRight() {
     let index = nowIndex + 1;
     if (index > length) {
@@ -311,7 +297,7 @@ $(function () {
     sliderSlide(index);
   }
 
-  //横方向の座標を取得
+  //Get the horizontal coordinates
   function getX(event) {
     return event.originalEvent.touches[0].pageX;
   }

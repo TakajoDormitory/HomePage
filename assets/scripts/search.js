@@ -1,7 +1,7 @@
 let v = new URLSearchParams(window.location.search);
 let search = v.get("search-key");
 
-// 検索キーワードの有無のフラッグ
+// with and without search terms
 found_flag = false;
 
 if (htmlName[htmlName.length - 2] == "english") {
@@ -46,7 +46,7 @@ $.each(urlLists, function (i) {
       if ($(data).find("p").text().indexOf(search) !== -1) {
         found_flag = true;
         console.log($(data).find("p").text());
-        // キーワードを含む文を生成
+        // Generate sentences containing keywords.
         let sentence = "";
         if (htmlName[htmlName.length - 2] == "english") {
           before_sentence = $(data)
@@ -64,7 +64,7 @@ $.each(urlLists, function (i) {
           if (i != $(data).find("p").text().split(search).length - 1)
             sentence += "<span style='font-weight:bold'>" + search + "</span>";
         }
-        // dataからタイトル情報をを抽出
+        // Extract title information
         for (let i = 47; i < $(data).length; i++) {
           if ($(data)[i].toString() == "[object HTMLTitleElement]") {
             title_index = i;

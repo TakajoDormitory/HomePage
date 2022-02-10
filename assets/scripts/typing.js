@@ -6,11 +6,11 @@ function TextTypingAnime(ClassName) {
     var windowHeight = $(window).height();
     var thisChild = "";
     if (scroll >= elemPos - windowHeight) {
-      thisChild = $(this).children(); //spanタグを取得
-      //spanタグの要素の１つ１つ処理を追加
+      thisChild = $(this).children(); //Get the span tag
+      //Add processing for each of the elements in the span tag.
       thisChild.each(function (i) {
         var time = 100;
-        //時差で表示する為にdelayを指定しその時間後にfadeInで表示させる
+        //specify a delay to show the time difference, and fadeIn after that time
         $(this)
           .delay(time * i)
           .fadeIn(time);
@@ -18,20 +18,20 @@ function TextTypingAnime(ClassName) {
     } else {
       thisChild = $(this).children();
       thisChild.each(function () {
-        $(this).stop(); //delay処理を止める
-        $(this).css("display", "none"); //spanタグ非表示
+        $(this).stop(); //stop the delay process
+        $(this).css("display", "none"); //span tag hidden
       });
     }
   });
 }
 
-// 画面が読み込まれるまで非表示
+// Hide until screen is loaded
 $("#container").css("opacity", "0");
-// 画面が読み込まれたら動作
+// when the screen is loaded
 $(window).on("load", function () {
-  // 画面が読み込まれたら表示
+  // Display
   $("#container").css("opacity", "1");
-  //spanタグを追加する
+  //Add a span tag
   var element = $(".TextTyping");
   element.each(function () {
     var text = $(this).html();
@@ -46,5 +46,6 @@ $(window).on("load", function () {
     $(this).html(textbox);
   });
 
-  TextTypingAnime("TextTyping"); /* アニメーション用の関数を呼ぶ*/
+  // Call a function for animation
+  TextTypingAnime("TextTyping");
 });
