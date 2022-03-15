@@ -1,13 +1,14 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 /* department */
 #department {
   margin-top: 75px;
   padding: 0 20px;
-  background-color: #a7212f;
+  background-color: var(--bs-red);
   height: 400px;
 }
 #department .title {
+  font-weight: 400;
   border-bottom: solid 1px white;
 }
 
@@ -17,7 +18,6 @@
 #department h1 {
   padding: 4px;
   text-align: center;
-  font-weight: bold;
   letter-spacing: 0.05em;
   color: white;
 }
@@ -25,12 +25,13 @@
   padding: 0.5em 1em;
   margin: 1em 0;
   transition: border-left 400ms;
+  font-weight: 400;
   background: white;
   border-left: solid 10px #265b94;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.33);
 }
 #department h3:hover {
-  border-left: solid 15px #d59649;
+  border-left: solid 15px var(--bs-gold);
 }
 #department .autor {
   color: white;
@@ -66,7 +67,7 @@
 #notice-inner dt {
   margin-left: 5px;
   font-size: 1.5em;
-  color: #a7212f;
+  color: var(--bs-red);
 }
 #notice-inner dd {
   margin-right: 40px;
@@ -88,7 +89,6 @@
 }
 #notice-title {
   text-align: center;
-  font-size: 28px;
 }
 
 @media screen and (max-width: 870px) {
@@ -182,7 +182,7 @@
   position: fixed;
   right: 10%;
   bottom: 40px;
-  border: solid 2px #d59649;
+  border: solid 2px var(--bs-gold);
   border-radius: 50%;
   background-color: rgba(213, 150, 73, 0.8);
 }
@@ -222,8 +222,8 @@
   position: relative; /*h1の中央寄せ配置の起点とするためのrelative*/
 }
 #video-area #message-ja {
-  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   z-index: 1;
+  padding: 6px 12px 12px 12px;
   font-weight: 400;
   /*要素の配置*/
   position: absolute;
@@ -411,18 +411,18 @@
 }
 
 #slider .nav li:hover {
-  background: #a7212f;
+  background: var(--bs-red);
 }
 
 #slider .nav li.current {
-  background: #a7212f;
+  background: var(--bs-red);
 }
 
 #slider .arrow {
   position: absolute;
   top: 50%;
   cursor: pointer;
-  background: #253965;
+  background: var(--bs-navy);
   color: #fff;
   padding: 5px;
   -webkit-transition: opacity 400ms;
@@ -497,11 +497,11 @@
   text-align: center;
   margin: 2em 0;
   padding: 20px 0;
-  background: #253965;
+  background: var(--bs-navy);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 #movie span {
-  border-bottom: solid 2px #d59649;
+  border-bottom: solid 2px var(--bs-gold);
 }
 @media screen and (max-width: 870px) {
   #movie #inner-video {

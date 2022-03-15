@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .student {
   text-align: center;
 }
@@ -46,7 +48,7 @@ h6 {
 #container h6 {
   width: 90px;
   margin: 15px auto 30px auto;
-  border-bottom: solid 3px #253965;
+  border-bottom: solid 3px var(--bs-navy);
   text-align: center;
 }
 

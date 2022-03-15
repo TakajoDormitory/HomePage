@@ -1,10 +1,19 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif+JP:wght@300&display=swap");
+
+:root {
+  --link-blue: #2997ff;
+  --bs-gold: #d59649;
+  --bs-red: #a7212f;
+  --bs-navy: #253965;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-style: normal;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",
-    "Meiryo", "游ゴシック", "Yu Gothic", "ＭＳ Ｐゴシック", "MS PGothic",
-    sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Serif JP", serif;
   -webkit-overflow-scrolling: auto;
 }
 
@@ -14,7 +23,7 @@ li {
 
 a:not(#fb-share, #tw-share, #line-share) {
   text-decoration: none;
-  color: #2997ff;
+  color: var(--link-blue);
 }
 
 h4 {
@@ -46,7 +55,7 @@ h4 {
 
 #container h4 {
   margin: 15px auto;
-  border-bottom: solid 3px #d59649;
+  border-bottom: solid 3px var(--bs-gold);
   display: inline-block;
 }
 #container h5 {
@@ -56,7 +65,7 @@ h4 {
 
 /* container table */
 #container table {
-  border: solid 1px #ccc;
+  border: solid 1px white;
   margin: auto;
   border-collapse: collapse;
 }
@@ -167,7 +176,7 @@ h4 {
 
 /* contents */
 .content #title {
-  border-bottom: solid 2px #a7212f;
+  border-bottom: solid 2px var(--bs-red);
   display: inline-block;
 }
 .content #titleWrapper {
@@ -200,7 +209,6 @@ h4 {
 }
 
 #bar li {
-  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   padding: 10px 2em;
   font-size: 18px;
   float: right;
@@ -221,7 +229,7 @@ h4 {
 }
 #bar .lang:hover {
   background-color: white;
-  color: #253965;
+  color: var(--bs-navy);
 }
 
 #bar .access:hover {
@@ -260,21 +268,26 @@ h4 {
   user-select: none;
 }
 
-#header h1 {
-  top: 25px;
-}
-
 @media screen and (min-width: 0px) and (max-width: 870px) {
+  #header h1 {
+    top: 20px;
+  }
   #header i {
     top: 40px;
   }
 }
 @media screen and (min-width: 870px) and (max-width: 1270px) {
+  #header h1 {
+    top: 28px;
+  }
   #header i {
     top: 48px;
   }
 }
 @media screen and (min-width: 1270px) {
+  #header h1 {
+    top: 18px;
+  }
   #header i {
     top: 38px;
   }
@@ -285,7 +298,6 @@ h4 {
   font-weight: 400;
 }
 #header #title-ja {
-  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
   left: 100px;
   font-weight: 400;
 }
@@ -358,7 +370,7 @@ h4 {
 /* footer */
 .footer {
   padding: 20px 0;
-  background-color: #a7212f;
+  background-color: var(--bs-red);
   color: white;
   text-align: center;
 }
@@ -371,7 +383,7 @@ h4 {
   text-decoration: underline;
 }
 #site:hover {
-  color: #2997ff;
+  color: var(--link-blue);
 }
 
 /* humburger menu */
@@ -382,7 +394,7 @@ h4 {
   width: 300px;
   height: 100%;
   padding-top: 100px;
-  background: #253965;
+  background: var(--bs-navy);
   font-size: 16px;
   box-sizing: border-box;
   z-index: 2;
@@ -429,7 +441,7 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 30px;
   height: 4px;
-  background: #000;
+  background: black;
   border-radius: 10px;
   -webkit-transition: all 400ms;
   transition: all 400ms;
@@ -453,7 +465,7 @@ body::-webkit-scrollbar {
 }
 
 #wrapper .btn-gnavi.open span {
-  background: #fff;
+  background: white;
 }
 
 #wrapper .btn-gnavi.open span:nth-child(1) {
@@ -538,8 +550,8 @@ body::-webkit-scrollbar {
   padding: 0 9px;
   line-height: 1;
   font-size: 19px;
-  background: #fff;
-  color: #2997ff;
+  background: white;
+  color: var(--link-blue);
   font-weight: bold;
 }
 .result-box p {
@@ -548,5 +560,5 @@ body::-webkit-scrollbar {
 }
 
 .box-title:hover {
-  border-bottom: solid 2px #2997ff;
+  border-bottom: solid 2px var(--link-blue);
 }

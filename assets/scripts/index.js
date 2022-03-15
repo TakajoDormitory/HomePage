@@ -98,7 +98,7 @@ $(function () {
     var id = url.match(/[\/?=]([a-zA-Z0-9_-]{11})[&\?]?/)[1];
     iframe
       .before(
-        '<img id="inner-video" src="http://img.youtube.com/vi/' +
+        '<img id="inner-video" src="https://i.ytimg.com/vi/' +
           id +
           '/mqdefault.jpg" />'
       )
