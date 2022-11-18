@@ -138,10 +138,15 @@ $(function () {
     // Embed image tags in the li element
     let slide = document.createElement("li");
     if (window.innerWidth < 1450)
-      slide.innerHTML = "<img width=100% src='" + imgList[i] + "'>";
+      slide.innerHTML =
+        "<img style='width:100vw;height:56.3vw;object-fit:cover' src='" +
+        imgList[i] +
+        "'>";
     else
       slide.innerHTML =
-        "<img width='800px' height='450px' src='" + imgList[i] + "'>";
+        "<img style='width:800px;height:450px;object-fit:cover' src='" +
+        imgList[i] +
+        "'>";
     // Add the li as a child element
     document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
