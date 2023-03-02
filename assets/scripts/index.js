@@ -1,9 +1,7 @@
 // Change relative paths between English and Japanese pages
-if (htmlName[htmlName.length - 2] == "english") {
-  jsonPath = "../../../assets/json/notice.json";
-} else {
-  jsonPath = "assets/json/notice.json";
-}
+jsonPath = "assets/json/notice.json";
+if (htmlName[htmlName.length - 2] == "english")
+  jsonPath = "../../../" + jsonPath;
 
 // Get the window aspect ratio
 let screenHeight, screenWidth, widthRaito;
@@ -27,6 +25,14 @@ function movieResize() {
   }
 }
 
+function imgResize() {
+  $(".slider_img").css(
+    window.innerWidth < 870
+      ? { width: "100vw", height: "56.3vw" }
+      : { width: "800px", height: "450px" }
+  );
+}
+
 $(function () {
   // Adjust video size when resizing window
   movieResize();
@@ -37,7 +43,8 @@ $(function () {
     }
     timer = setTimeout(function () {
       movieResize();
-    }, 200);
+      imgResize();
+    }, 50);
   });
 
   // Obtain and display notification information
@@ -116,37 +123,27 @@ $(function () {
   });
 
   // slider
-  let imgList;
+  let imgList = [
+    "assets/images/OverView.jpg",
+    "assets/images/EntranceCeremony.JPG",
+    "assets/images/Firework.JPG",
+    "assets/images/soccer.jpg",
+  ];
+
   if (htmlName[htmlName.length - 2] == "english") {
-    imgList = [
-      "../../assets/images/OverView.jpg",
-      "../../assets/images/EntranceCeremony.JPG",
-      "../../assets/images/Firework.JPG",
-      "../../assets/images/soccer.jpg",
-    ];
-  } else {
-    imgList = [
-      "assets/images/OverView.jpg",
-      "assets/images/EntranceCeremony.JPG",
-      "assets/images/Firework.JPG",
-      "assets/images/soccer.jpg",
-    ];
+    for (let i = 0; i < imgList.length; i++) {
+      imgList[i] = "../../" + imgList[i];
+    }
   }
 
   // add image and navigation buttons
   for (let i = 0; i < imgList.length; i++) {
     // Embed image tags in the li element
     let slide = document.createElement("li");
-    if (window.innerWidth < 1450)
-      slide.innerHTML =
-        "<img style='width:100vw;height:56.3vw;object-fit:cover' src='" +
-        imgList[i] +
-        "'>";
-    else
-      slide.innerHTML =
-        "<img style='width:800px;height:450px;object-fit:cover' src='" +
-        imgList[i] +
-        "'>";
+    slide.innerHTML =
+      "<img class='slider_img' style='object-fit:cover' src='" +
+      imgList[i] +
+      "'>";
     // Add the li as a child element
     document.getElementsByClassName("slider-inner")[0].appendChild(slide);
 
@@ -157,6 +154,11 @@ $(function () {
     // Add the li as a child element
     document.getElementsByClassName("nav")[0].appendChild(nav);
   }
+  $(".slider_img").css(
+    window.innerWidth < 870
+      ? { width: "100vw", height: "56.3vw" }
+      : { width: "800px", height: "450px" }
+  );
 
   // Get the number of slides (-1 for processing)
   let length = imgList.length - 1;
