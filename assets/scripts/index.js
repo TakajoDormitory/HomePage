@@ -125,7 +125,7 @@ $(function () {
   // slider
   let imgList = [
     "assets/images/OverView.jpg",
-    "assets/images/EntranceCeremony.JPG",
+    "assets/images/EntranceCeremony_new.JPG",
     "assets/images/Firework.JPG",
     "assets/images/soccer.jpg",
   ];
